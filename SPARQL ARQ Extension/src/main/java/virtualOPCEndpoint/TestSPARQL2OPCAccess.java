@@ -17,7 +17,7 @@ import org.apache.jena.util.FileManager;
 public class TestSPARQL2OPCAccess {
 	
 	public static void main(String[] args) {	
-	String inputFileName = "C:/Users/guser/TU Wien/TU Wien/BIM4BEMS/BuildingTopologyOntology/SensorTestExport.owl";
+	String inputFileName = "../Ontologies/SimpleTestOntology.owl";
 	
 	Model model=ModelFactory.createDefaultModel();	
 	Model tempModel=ModelFactory.createDefaultModel();
@@ -44,27 +44,22 @@ public class TestSPARQL2OPCAccess {
 	
 	//----------start Query Data-----------------------------
 	
-//	  String queryString = 	"PREFIX se: <http://www.semanticweb.org/gsteindl/ontologies/2018/8/SensorTest.owl#>\r\n" + 
-//		  		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
-//		  		"PREFIX apf: <http://jena.apache.org/ARQ/property#>\r\n"+
-//		  		"\r\n" + 
-//		  		"SELECT * \r\n" + 
-//		  		"WHERE {\r\n" +			  		
-//		  		"  ?dataPoint se:hasType ?type.\r\n"+
-//		  	    "  ?dataPoint se:getdbValues ?observedValue.\r\n" +
-//		  	    "#?observedValue se:currentValue ?val.\r\n"+
-//		  	    "#?observedValue se:timestamp ?time.\r\n"+
-//		  		"}" ;
-
-	  String queryString = 	"PREFIX se: <http://www.semanticweb.org/gsteindl/ontologies/2018/8/SensorTest.owl#>\r\n" + 
+	 String queryString = 	
+			    "PREFIX opc: <http://auto.tuwien.ac.at/opcua.owl#>\r\n" +
 		  		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
-		  		"PREFIX apf: <http://jena.apache.org/ARQ/property#>\r\n"+
-		  		"\r\n" + 
-		  		"SELECT * \r\n" + 
-		  		"WHERE {\r\n" +			  		
-		  		"  ?dataPoint se:hasType ?type.\r\n"+
-		  	    "  ?dataPoint se:getdbValues (?observedValue \"2018-11-13 09:00\" \"2018-11-13 09:55\").\r\n" +
-		  		"}" ;
+				"SELECT * \r\n"+
+		  		"WHERE {\r\n" +	
+		  		" ?a opc:nodeId ?c.\r\n"+
+		  		" ?a opc:value ?value.\r\n"+
+		  	  "}" ;
+
+//	 String queryString = 	
+//			    "PREFIX opc: <http://auto.tuwien.ac.at/opcua.owl#>\r\n" + 
+//		  		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
+//				"SELECT * \r\n"+
+//		  		"WHERE {\r\n" +	
+//		  		" ?a ?b ?c.\r\n"+
+//		  	  "}" ;
 
 	  Query query = QueryFactory.create(queryString);
 	  

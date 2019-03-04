@@ -51,7 +51,7 @@ public class GetCurrentValue implements PropertyFunctionFactory {
 	public static void init() {
 		//register custom property function 
 		final PropertyFunctionRegistry reg = PropertyFunctionRegistry.chooseRegistry(ARQ.getContext());
-		reg.put("http://auto.tuwien.ac.at/opcua.owl#currentValue", new GetCurrentValue());
+		reg.put("http://auto.tuwien.ac.at/opcua.owl#value", new GetCurrentValue());
 		PropertyFunctionRegistry.set(ARQ.getContext(), reg);
 	}
     
@@ -75,12 +75,12 @@ public class GetCurrentValue implements PropertyFunctionFactory {
 				 String queryString = 	
 						    "PREFIX opc: <http://auto.tuwien.ac.at/opcua.owl#>\r\n" + 
 					  		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
-							"SELECT ?nsIndex ?NodeId \r\n" +
+							"SELECT ?nsIndex ?id \r\n" +
 					  		"WHERE {\r\n" +	
-					  		"<"+datapointURI+">" + " opc:NodeId ?NodeId.\r\n"+
-					  		"?NodeId opc:NamespaceIndex ?nsIndex.\r\n"+
-					  		"?NodeId opc:IdentifierType ?idType.\r\n"+
-					  		"?NodeId opc:Identifier ?id.\r\n"+
+					  		"<"+datapointURI+">" + " opc:nodeId ?NodeId.\r\n"+
+					  		"?NodeId opc:namespaceIndex ?nsIndex.\r\n"+
+					  		"?NodeId opc:identifierType ?idType.\r\n"+
+					  		"?NodeId opc:identifier ?id.\r\n"+
 					  	  "}" ;
 				
 				ResultSet results = null;
@@ -101,8 +101,8 @@ public class GetCurrentValue implements PropertyFunctionFactory {
 					  //Retrieve data 
 					    //TODO: change to dynamic opc-endpoint identification from information stored in the ontology
 						ExtConnector opcCon= new OPCUAConnector("opc.tcp://G-StationHP:53530/OPCUA/SimulationServer"); 
+					
 						
-						//String val=opcCon.readValue(2, "MyLevel");//
 						String currentVal=opcCon.readValue( Integer.parseInt(qsol.get("nsIndex").toString()), qsol.get("id").toString());
 						
 						//serialize to json
