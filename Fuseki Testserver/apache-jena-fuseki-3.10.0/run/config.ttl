@@ -24,7 +24,8 @@
 
    # Add any custom classes you want to load.
    # Must have a "public static void init()" method.
-   # ja:loadClass "your.code.Class" ;   
+   # ja:loadClass "your.code.Class" ;  
+	ja:loadClass "virtualOPCEndpoint.GetCurrentValue";
 
    # End triples.
    .

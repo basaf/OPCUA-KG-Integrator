@@ -103,11 +103,31 @@
     
 
 
+    <!-- http://auto.tuwien.ac.at/opcua.owl#MySwitch -->
+
+    <owl:NamedIndividual rdf:about="http://auto.tuwien.ac.at/opcua.owl#MySwitch">
+        <rdf:type rdf:resource="http://auto.tuwien.ac.at/opcua.owl#Node"/>
+        <nodeId rdf:resource="http://auto.tuwien.ac.at/opcua.owl#02MySwitch"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://auto.tuwien.ac.at/opcua.owl#02MyLevel -->
 
     <owl:NamedIndividual rdf:about="http://auto.tuwien.ac.at/opcua.owl#02MyLevel">
         <rdf:type rdf:resource="http://auto.tuwien.ac.at/opcua.owl#NodeId"/>
         <identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MyLevel</identifier>
+        <identifierType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">String</identifierType>
+        <namespaceIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</namespaceIndex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://auto.tuwien.ac.at/opcua.owl#02MySwitch -->
+
+    <owl:NamedIndividual rdf:about="http://auto.tuwien.ac.at/opcua.owl#02MySwitch">
+        <rdf:type rdf:resource="http://auto.tuwien.ac.at/opcua.owl#NodeId"/>
+        <identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MySwitch</identifier>
         <identifierType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">String</identifierType>
         <namespaceIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</namespaceIndex>
     </owl:NamedIndividual>

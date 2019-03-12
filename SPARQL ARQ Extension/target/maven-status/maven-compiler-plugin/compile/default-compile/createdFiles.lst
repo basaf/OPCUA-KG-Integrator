@@ -1,2 +1,6 @@
 virtualOPCEndpoint\ExtConnector.class
 virtualOPCEndpoint\OPCUAConnector.class
+virtualOPCEndpoint\TestOPCReadConnection.class
+virtualOPCEndpoint\GetCurrentValue$1.class
+virtualOPCEndpoint\GetCurrentValue.class
+virtualOPCEndpoint\TestSPARQL2OPCAccess.class
