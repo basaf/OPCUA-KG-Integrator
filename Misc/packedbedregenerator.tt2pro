@@ -5,15 +5,22 @@
 
 PROJECTNAME = PackedBedRegenerator
 
-TEMPLATESET = ($TEMPLATES)/modeling/v1_0/t0/modeling.tt2set
+TEMPLATESET = ($TEMPLATES)/net/v2_6/t1/net_server.tt2set
 
 MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
     packedbedregenerator.ua
 
+VARIABLES+= packedbedregenerator.ua: Namespace=ASG_NS; Organization=ASG; 
+
 COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
     packedbedregenerator.ua: #008000
 
-OUTPUTPATH = 
+PROJECTVARIABLES += GenerateDefaultApplication = true \
+    NetFramework = 4.6.1 \
+    ProjectNamespace = ASG_NS \
+    ProjectOrganization = ASG
+
+OUTPUTPATH = dotNet
 
 GENERATE += packedbedregenerator.ua
 
