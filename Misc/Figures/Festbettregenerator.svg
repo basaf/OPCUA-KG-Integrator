@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="Festbettregenerator.svg"
-   inkscape:export-filename="C:\Users\guser\TUCloud\MyTUSpace\SIC!\99_Publikationen_Konferenzen\ETFA2019_Zaragoza_Spain\Figures\Festbettregenerator_v2.png"
+   inkscape:export-filename="C:\Users\guser\TUCloud\MyTUSpace\SIC!\99_Publikationen_Konferenzen\ETFA2019_Zaragoza_Spain\Figures\Festbettregenerator.png"
    inkscape:export-xdpi="319.84622"
    inkscape:export-ydpi="319.84622">
   <defs
@@ -86,9 +86,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="268.84557"
-     inkscape:cy="919.22895"
+     inkscape:zoom="1.4"
+     inkscape:cx="215.80106"
+     inkscape:cy="830.00129"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -129,7 +129,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -325,13 +325,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="40.116058"
-       y="98.052963"
-       id="text5224"><tspan
+       x="40.021564"
+       y="98.241951"
+       id="text5224"
+       inkscape:export-xdpi="319"
+       inkscape:export-ydpi="319"><tspan
          sodipodi:role="line"
          id="tspan5222"
-         x="40.116058"
-         y="98.052963"
+         x="40.021564"
+         y="98.241951"
          style="stroke-width:0.26458332">m</tspan></text>
     <ellipse
        style="display:inline;fill:none;fill-opacity:0.16862745;stroke:#000000;stroke-width:0.19769254;stroke-opacity:1"
@@ -456,6 +458,31 @@
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.26174334px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 102.5,34.5 V 37"
        id="path5120-8"
+       inkscape:connector-curvature="0" />
+    <ellipse
+       style="display:inline;fill:none;fill-opacity:0.16862745;stroke:#000000;stroke-width:0.19769254;stroke-opacity:1"
+       id="path4611-42-3-3-9"
+       cx="22.431675"
+       cy="97.201973"
+       rx="3.8357694"
+       ry="3.6386745" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="21.017488"
+       y="98.228523"
+       id="text5186-0"><tspan
+         sodipodi:role="line"
+         id="tspan5184-5"
+         x="21.017488"
+         y="98.228523"
+         style="stroke-width:0.26458332">T<tspan
+   style="font-size:2.06374979px;baseline-shift:sub;stroke-width:0.26458332"
+   id="tspan1094-2">i</tspan></tspan></text>
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:0.31465375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 22.5,100.88711 V 104.5"
+       id="path5120-1"
        inkscape:connector-curvature="0" />
   </g>
 </svg>
