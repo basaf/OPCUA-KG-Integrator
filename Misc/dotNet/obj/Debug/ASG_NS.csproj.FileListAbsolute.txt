@@ -1,0 +1,10 @@
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\bin\Debug\ASG.ASG_NS.exe.config
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\bin\Debug\ASG.ASG_NS.exe
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\bin\Debug\ASG.ASG_NS.pdb
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\bin\Debug\UnifiedAutomation.UaBase.dll
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\bin\Debug\UnifiedAutomation.UaServer.dll
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\obj\Debug\ASG_NS.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\obj\Debug\ASG_NS.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\obj\Debug\ASG_NS.csproj.CopyComplete
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\obj\Debug\ASG.ASG_NS.exe
+C:\Users\user1\Desktop\VirtualEndpointsProofOfConcept\Git\VirtualOPCUA2SPQARL\Misc\dotNet\obj\Debug\ASG.ASG_NS.pdb
