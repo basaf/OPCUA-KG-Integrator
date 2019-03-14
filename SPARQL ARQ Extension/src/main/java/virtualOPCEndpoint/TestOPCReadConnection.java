@@ -7,10 +7,13 @@ public class TestOPCReadConnection {
 
 		ExtConnector opcCon= new OPCUAConnector("opc.tcp://G-StationHP:53530/OPCUA/SimulationServer");
 		
-		String val=opcCon.readValue(2, "MyLevel");
-		
-		
+		//test valueRead
+		String val=opcCon.readValue(2, "MyLevel");	
 		System.out.println("Retruned value = " + val);
+		
+		//test histRead
+		String val2=opcCon.readhistData(2, "MyLevel","s","s");	
+		System.out.println("Retruned value = " + val2);
 	}
 
 }
