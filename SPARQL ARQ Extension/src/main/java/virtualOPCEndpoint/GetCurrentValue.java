@@ -102,7 +102,7 @@ public class GetCurrentValue implements PropertyFunctionFactory {
 					    //TODO: change to dynamic opc-endpoint identification from information stored in the ontology
 						ExtConnector opcCon= new OPCUAConnector("opc.tcp://G-StationHP:53530/OPCUA/SimulationServer"); 
 					
-						
+					
 						String currentVal=opcCon.readValue( Integer.parseInt(qsol.get("nsIndex").toString()), qsol.get("id").toString());
 						
 						//serialize to json

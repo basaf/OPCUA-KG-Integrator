@@ -26,6 +26,7 @@
    # Must have a "public static void init()" method.
    # ja:loadClass "your.code.Class" ;  
 	ja:loadClass "virtualOPCEndpoint.GetCurrentValue";
+	ja:loadClass "virtualOPCEndpoint.GetHistoricalValues";
 
    # End triples.
    .

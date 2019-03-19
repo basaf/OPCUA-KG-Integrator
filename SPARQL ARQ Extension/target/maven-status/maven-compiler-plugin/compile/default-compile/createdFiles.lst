@@ -1,6 +1,10 @@
-virtualOPCEndpoint\ExtConnector.class
+virtualOPCEndpoint\GetHistoricalValues.class
 virtualOPCEndpoint\OPCUAConnector.class
-virtualOPCEndpoint\TestOPCReadConnection.class
-virtualOPCEndpoint\GetCurrentValue$1.class
+virtualOPCEndpoint\GetHistoricalValues$1.class
+virtualOPCEndpoint\TestSPARQL2OPCValueAccess.class
 virtualOPCEndpoint\GetCurrentValue.class
-virtualOPCEndpoint\TestSPARQL2OPCAccess.class
+virtualOPCEndpoint\TimeSeries.class
+virtualOPCEndpoint\ExtConnector.class
+virtualOPCEndpoint\TestOPCReadConnection.class
+virtualOPCEndpoint\Test_HistoricalValuesAccess.class
+virtualOPCEndpoint\GetCurrentValue$1.class
