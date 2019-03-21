@@ -27,13 +27,11 @@
     <uaBase:DisplayName>HeaterType</uaBase:DisplayName>
     <uaBase:HasComponent>
       <uaBase:BaseDataVariableType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6053">
-        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531794971859, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
         <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
         >0.0</uaBase:MinimumSamplingInterval>
+        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596884311698, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:DisplayName>Setpoint</uaBase:DisplayName>
-        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</uaBase:Historizing>
         <rdfs:label>Setpoint</rdfs:label>
         <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:UserAccessLevel>
@@ -45,6 +43,8 @@
         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >-1</uaBase:ValueRank>
         <uaBase:NodeClass>Variable</uaBase:NodeClass>
+        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</uaBase:Historizing>
         <uaBase:NodeId>NodeId{ns=2, id=6053}</uaBase:NodeId>
         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:AccessLevel>
@@ -74,14 +74,14 @@
             >0.0</uaBase:MinimumSamplingInterval>
             <rdfs:label>InputArguments</rdfs:label>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
-            <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[8, 0, 0, 0, 115, 101, 116, 112, 111, 105, 110, 116, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531795440609, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[8, 0, 0, 0, 115, 101, 116, 112, 111, 105, 110, 116, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596884928591, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >1</uaBase:AccessLevel>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
             >1</uaBase:ValueRank>
             <uaBase:BrowseName>InputArguments</uaBase:BrowseName>
-            <uaBase:DataType>NodeId{ns=0, id=296}</uaBase:DataType>
             <uaBase:DisplayName>InputArguments</uaBase:DisplayName>
+            <uaBase:DataType>NodeId{ns=0, id=296}</uaBase:DataType>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:NodeId>NodeId{ns=2, id=6036}</uaBase:NodeId>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
@@ -126,7 +126,6 @@
             <uaBase:DataType>NodeId{ns=0, id=12}</uaBase:DataType>
             <uaBase:DisplayName>SerialNumber</uaBase:DisplayName>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531796612484, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
@@ -134,6 +133,7 @@
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >0.0</uaBase:MinimumSamplingInterval>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5013"/>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596885788196, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:UserAccessLevel>
@@ -152,14 +152,41 @@
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5013"/>
             <rdfs:label>CurrentTemperature</rdfs:label>
             <uaBase:NodeId>NodeId{ns=2, id=6037}</uaBase:NodeId>
+            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596885272433, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:UserAccessLevel>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
             <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
+            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</uaBase:Historizing>
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
-            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
+            <uaBase:HasProperty>
+              <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6065">
+                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</uaBase:Historizing>
+                <rdfs:label>EngineeringUnits</rdfs:label>
+                <uaBase:MinimumSamplingInterval rdf:datatype=
+                "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
+                <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
+                <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                <uaBase:WriteMask>0</uaBase:WriteMask>
+                <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >-1</uaBase:ValueRank>
+                <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:AccessLevel>
+                <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:UserAccessLevel>
+                <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6037"/>
+                <uaBase:NodeId>NodeId{ns=2, id=6065}</uaBase:NodeId>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596885383676, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                <uaBase:NodeClass>Variable</uaBase:NodeClass>
+              </uaBase:PropertyType>
+            </uaBase:HasProperty>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
@@ -180,9 +207,9 @@
                 <uaBase:DataType>NodeId{ns=0, id=884}</uaBase:DataType>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
                 <uaBase:NodeId>NodeId{ns=2, id=6038}</uaBase:NodeId>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596885545484, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                 >false</uaBase:Historizing>
-                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531796143734, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <rdfs:label>EURange</rdfs:label>
                 <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:UserAccessLevel>
@@ -192,7 +219,6 @@
                 >-1</uaBase:ValueRank>
               </uaBase:PropertyType>
             </uaBase:HasProperty>
-            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531795909359, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
           </uaBase:AnalogItemType>
         </uaBase:HasComponent>
         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
@@ -210,14 +236,14 @@
     <uaBase:HasComponent>
       <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6002">
         <uaBase:NodeClass>Variable</uaBase:NodeClass>
-        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</uaBase:Historizing>
         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:AccessLevel>
-        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531792862484, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</uaBase:Historizing>
         <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
         >0.0</uaBase:MinimumSamplingInterval>
+        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596881884578, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >-1</uaBase:ValueRank>
         <rdfs:label>CurrentTemperature</rdfs:label>
@@ -245,13 +271,13 @@
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >1</uaBase:UserAccessLevel>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6002"/>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531793331234, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <rdfs:label>EURange</rdfs:label>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
             >false</uaBase:Historizing>
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:NodeId>NodeId{ns=2, id=6003}</uaBase:NodeId>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596882198081, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
           </uaBase:PropertyType>
         </uaBase:HasProperty>
@@ -261,7 +287,7 @@
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
             <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531793096859, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596882005934, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -296,13 +322,10 @@
     <uaBase:NodeClass>ObjectType</uaBase:NodeClass>
     <uaBase:HasComponent>
       <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6004">
-        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</uaBase:Historizing>
         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
         <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
         >0.0</uaBase:MinimumSamplingInterval>
-        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531783941586, javaDate=Thu Mar 21 15:46:18 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:HasProperty>
           <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6029">
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
@@ -312,7 +335,6 @@
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >1</uaBase:UserAccessLevel>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531784175961, javaDate=Thu Mar 21 15:46:18 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
             <uaBase:NodeId>NodeId{ns=2, id=6029}</uaBase:NodeId>
@@ -323,6 +345,7 @@
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6004"/>
             <rdfs:label>EngineeringUnits</rdfs:label>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596875452710, javaDate=Thu Mar 21 17:34:47 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
             >false</uaBase:Historizing>
@@ -333,6 +356,7 @@
         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >-1</uaBase:ValueRank>
         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#MassFlowSensorType"/>
+        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596875240337, javaDate=Thu Mar 21 17:34:47 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
         <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:UserAccessLevel>
@@ -344,6 +368,8 @@
         <uaBase:DisplayName>CurrentMassFlow</uaBase:DisplayName>
         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:AccessLevel>
+        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</uaBase:Historizing>
         <uaBase:HasProperty>
           <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6005">
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
@@ -357,7 +383,7 @@
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:DisplayName>EURange</uaBase:DisplayName>
             <uaBase:BrowseName>EURange</uaBase:BrowseName>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531784410336, javaDate=Thu Mar 21 15:46:18 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596875644857, javaDate=Thu Mar 21 17:34:47 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >1</uaBase:UserAccessLevel>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -407,9 +433,35 @@
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
-            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531793799984, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
+            >true</uaBase:Historizing>
+            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596883239720, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:HasProperty>
+              <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6067">
+                <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6045"/>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596883391415, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                <uaBase:NodeId>NodeId{ns=2, id=6067}</uaBase:NodeId>
+                <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >-1</uaBase:ValueRank>
+                <uaBase:WriteMask>0</uaBase:WriteMask>
+                <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
+                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</uaBase:Historizing>
+                <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                <rdfs:label>EngineeringUnits</rdfs:label>
+                <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:UserAccessLevel>
+                <uaBase:MinimumSamplingInterval rdf:datatype=
+                "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
+                <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:AccessLevel>
+                <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+              </uaBase:PropertyType>
+            </uaBase:HasProperty>
             <rdfs:label>CurrentTemperature</rdfs:label>
             <uaBase:NodeId>NodeId{ns=2, id=6045}</uaBase:NodeId>
             <uaBase:HasProperty>
@@ -424,7 +476,6 @@
                 <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
                 <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                 >-1</uaBase:ValueRank>
-                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531794034359, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
                 <uaBase:DataType>NodeId{ns=0, id=884}</uaBase:DataType>
                 <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -434,6 +485,7 @@
                 <uaBase:BrowseName>EURange</uaBase:BrowseName>
                 <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                 <uaBase:NodeId>NodeId{ns=2, id=6046}</uaBase:NodeId>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596883553223, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6045"/>
                 <rdfs:label>EURange</rdfs:label>
               </uaBase:PropertyType>
@@ -467,10 +519,10 @@
             >3</uaBase:AccessLevel>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
             <uaBase:WriteMask>0</uaBase:WriteMask>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596883765596, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <rdfs:label>SerialNumber</rdfs:label>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531794268734, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5017"/>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
@@ -496,12 +548,11 @@
       <j.0:TemperatureSensorType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5010">
         <uaBase:HasProperty>
           <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6019">
+            <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
             >-1</uaBase:ValueRank>
-            <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >0.0</uaBase:MinimumSamplingInterval>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531797784359, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <rdfs:label>SerialNumber</rdfs:label>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:NodeId>NodeId{ns=2, id=6019}</uaBase:NodeId>
@@ -513,6 +564,7 @@
             >3</uaBase:UserAccessLevel>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5010"/>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596886809609, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -531,8 +583,36 @@
         <uaBase:HasComponent>
           <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6017">
             <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
-            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531797315609, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596886152264, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:HasProperty>
+              <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6064">
+                <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                <uaBase:WriteMask>0</uaBase:WriteMask>
+                <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:AccessLevel>
+                <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</uaBase:Historizing>
+                <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6017"/>
+                <rdfs:label>EngineeringUnits</rdfs:label>
+                <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596886283733, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >-1</uaBase:ValueRank>
+                <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:UserAccessLevel>
+                <uaBase:NodeId>NodeId{ns=2, id=6064}</uaBase:NodeId>
+                <uaBase:MinimumSamplingInterval rdf:datatype=
+                "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
+                <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
+              </uaBase:PropertyType>
+            </uaBase:HasProperty>
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5010"/>
+            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</uaBase:Historizing>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
             <uaBase:WriteMask>0</uaBase:WriteMask>
@@ -548,7 +628,7 @@
                 <uaBase:DisplayName>EURange</uaBase:DisplayName>
                 <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:AccessLevel>
-                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531797315609, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596886506219, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                 >false</uaBase:Historizing>
                 <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
@@ -556,9 +636,9 @@
                 <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
                 <uaBase:BrowseName>EURange</uaBase:BrowseName>
                 <uaBase:NodeId>NodeId{ns=2, id=6018}</uaBase:NodeId>
-                <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
                 <uaBase:MinimumSamplingInterval rdf:datatype=
                 "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
+                <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
                 <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6017"/>
               </uaBase:PropertyType>
             </uaBase:HasProperty>
@@ -571,8 +651,6 @@
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:UserAccessLevel>
-            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
             <rdfs:label>CurrentTemperature</rdfs:label>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
@@ -632,8 +710,8 @@
                 >3</uaBase:AccessLevel>
                 <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                 >-1</uaBase:ValueRank>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596888174864, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5007"/>
-                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531798721859, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
               </uaBase:PropertyType>
             </uaBase:HasProperty>
@@ -647,15 +725,43 @@
                 <uaBase:NodeId>NodeId{ns=2, id=6011}</uaBase:NodeId>
                 <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                <uaBase:HasProperty>
+                  <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6063">
+                    <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</uaBase:Historizing>
+                    <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                    <uaBase:NodeId>NodeId{ns=2, id=6063}</uaBase:NodeId>
+                    <uaBase:MinimumSamplingInterval rdf:datatype=
+                    "http://www.w3.org/2001/XMLSchema#double"
+                    >0.0</uaBase:MinimumSamplingInterval>
+                    <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
+                    <uaBase:WriteMask>0</uaBase:WriteMask>
+                    <rdfs:label>EngineeringUnits</rdfs:label>
+                    <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                    <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                    >1</uaBase:UserAccessLevel>
+                    <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >-1</uaBase:ValueRank>
+                    <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                    <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                    >1</uaBase:AccessLevel>
+                    <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                    <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596887477067, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                    <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                    <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6011"/>
+                  </uaBase:PropertyType>
+                </uaBase:HasProperty>
                 <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
                 <uaBase:MinimumSamplingInterval rdf:datatype=
                 "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
+                <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596887234355, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
                 <rdfs:label>CurrentTemperature</rdfs:label>
+                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</uaBase:Historizing>
                 <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                 >-1</uaBase:ValueRank>
-                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                >false</uaBase:Historizing>
                 <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
                 <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >3</uaBase:AccessLevel>
@@ -683,13 +789,12 @@
                     "http://www.w3.org/2001/XMLSchema#double"
                     >0.0</uaBase:MinimumSamplingInterval>
                     <uaBase:BrowseName>EURange</uaBase:BrowseName>
+                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596887911926, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
                     <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6011"/>
-                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531798487484, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                   </uaBase:PropertyType>
                 </uaBase:HasProperty>
                 <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
-                <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531798253109, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
               </uaBase:AnalogItemType>
             </uaBase:HasComponent>
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5006"/>
@@ -721,6 +826,7 @@
                 <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                 >false</uaBase:Historizing>
                 <rdfs:label>InputArguments</rdfs:label>
+                <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[8, 0, 0, 0, 115, 101, 116, 112, 111, 105, 110, 116, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596888801870, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
                 <uaBase:DisplayName>InputArguments</uaBase:DisplayName>
                 <uaBase:MinimumSamplingInterval rdf:datatype=
@@ -730,7 +836,6 @@
                 <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:UserAccessLevel>
                 <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=7003"/>
-                <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[8, 0, 0, 0, 115, 101, 116, 112, 111, 105, 110, 116, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531799893734, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:WriteMask>0</uaBase:WriteMask>
                 <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                 <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
@@ -763,7 +868,6 @@
                     <uaBase:MinimumSamplingInterval rdf:datatype=
                     "http://www.w3.org/2001/XMLSchema#double"
                     >0.0</uaBase:MinimumSamplingInterval>
-                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531800362484, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
                     <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                     >-1</uaBase:ValueRank>
@@ -777,6 +881,7 @@
                     >1</uaBase:AccessLevel>
                     <uaBase:DisplayName>EURange</uaBase:DisplayName>
                     <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596889418763, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:DataType>NodeId{ns=0, id=884}</uaBase:DataType>
                     <uaBase:NodeId>NodeId{ns=2, id=6042}</uaBase:NodeId>
                     <uaBase:WriteMask>0</uaBase:WriteMask>
@@ -789,7 +894,35 @@
                 <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
                 <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5015"/>
                 <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
-                <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531800128109, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                <uaBase:HasProperty>
+                  <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6066">
+                    <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                    <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</uaBase:Historizing>
+                    <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                    <rdfs:label>EngineeringUnits</rdfs:label>
+                    <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                    >1</uaBase:UserAccessLevel>
+                    <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                    <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                    <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                    <uaBase:WriteMask>0</uaBase:WriteMask>
+                    <uaBase:NodeId>NodeId{ns=2, id=6066}</uaBase:NodeId>
+                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596889246842, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                    <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
+                    <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6041"/>
+                    <uaBase:MinimumSamplingInterval rdf:datatype=
+                    "http://www.w3.org/2001/XMLSchema#double"
+                    >0.0</uaBase:MinimumSamplingInterval>
+                    <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                    <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                    >1</uaBase:AccessLevel>
+                    <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                    >-1</uaBase:ValueRank>
+                  </uaBase:PropertyType>
+                </uaBase:HasProperty>
+                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</uaBase:Historizing>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
                 <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >3</uaBase:AccessLevel>
@@ -798,11 +931,10 @@
                 "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
                 <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
                 <uaBase:NodeId>NodeId{ns=2, id=6041}</uaBase:NodeId>
-                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                >false</uaBase:Historizing>
+                <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
                 <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >3</uaBase:UserAccessLevel>
-                <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
+                <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596889115373, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <rdfs:label>CurrentTemperature</rdfs:label>
                 <uaBase:WriteMask>0</uaBase:WriteMask>
               </uaBase:AnalogItemType>
@@ -813,8 +945,8 @@
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:HasProperty>
               <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6043">
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596889661475, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
-                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531800831234, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                 >-1</uaBase:ValueRank>
                 <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
@@ -847,27 +979,27 @@
         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
         <uaBase:HasComponent>
           <uaBase:BaseDataVariableType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6054">
-            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531799424984, javaDate=Thu Mar 21 15:46:19 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:BrowseName>Setpoint</uaBase:BrowseName>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >0.0</uaBase:MinimumSamplingInterval>
             <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#BaseDataVariableType"/>
+            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596888528819, javaDate=Thu Mar 21 17:34:48 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <rdfs:label>Setpoint</rdfs:label>
             <uaBase:NodeId>NodeId{ns=2, id=6054}</uaBase:NodeId>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
             >-1</uaBase:ValueRank>
+            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</uaBase:Historizing>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:UserAccessLevel>
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5014"/>
             <uaBase:DisplayName>Setpoint</uaBase:DisplayName>
-            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
             <uaBase:WriteMask>0</uaBase:WriteMask>
           </uaBase:BaseDataVariableType>
         </uaBase:HasComponent>
@@ -912,6 +1044,7 @@
                 <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:AccessLevel>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[5, 0, 0, 0, 115, 112, 101, 101, 100, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596890298594, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
                 <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                 >1</uaBase:ValueRank>
@@ -922,7 +1055,6 @@
                 <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:UserAccessLevel>
                 <uaBase:DataType>NodeId{ns=0, id=296}</uaBase:DataType>
-                <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[5, 0, 0, 0, 115, 112, 101, 101, 100, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531801534359, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <rdfs:label>InputArguments</rdfs:label>
                 <uaBase:MinimumSamplingInterval rdf:datatype=
                 "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
@@ -938,27 +1070,27 @@
         <uaBase:HasComponent>
           <uaBase:BaseDataVariableType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6051">
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</uaBase:Historizing>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >0.0</uaBase:MinimumSamplingInterval>
             <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5016"/>
+            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596890035656, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:UserAccessLevel>
             <uaBase:BrowseName>Setpoint</uaBase:BrowseName>
-            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#BaseDataVariableType"/>
             <rdfs:label>Setpoint</rdfs:label>
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
             >-1</uaBase:ValueRank>
-            <uaBase:DisplayName>Setpoint</uaBase:DisplayName>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
+            <uaBase:DisplayName>Setpoint</uaBase:DisplayName>
             <uaBase:NodeId>NodeId{ns=2, id=6051}</uaBase:NodeId>
-            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531801299984, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
           </uaBase:BaseDataVariableType>
         </uaBase:HasComponent>
         <uaBase:HasTypeDefinition>
@@ -996,8 +1128,8 @@
         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#BaseSensorType"/>
         <uaBase:DisplayName>SerialNumber</uaBase:DisplayName>
         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596874977399, javaDate=Thu Mar 21 17:34:47 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:DataType>NodeId{ns=0, id=12}</uaBase:DataType>
-        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531783707211, javaDate=Thu Mar 21 15:46:18 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:NodeClass>Variable</uaBase:NodeClass>
         <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
         >0.0</uaBase:MinimumSamplingInterval>
@@ -1030,8 +1162,8 @@
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:NodeId>NodeId{ns=2, id=6035}</uaBase:NodeId>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596891542493, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5001"/>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531802955257, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <rdfs:label>SerialNumber</rdfs:label>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:DataType>NodeId{ns=0, id=12}</uaBase:DataType>
@@ -1048,24 +1180,49 @@
         <rdfs:label>MassFlowSensor</rdfs:label>
         <uaBase:HasComponent>
           <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6033">
-            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
+            <uaBase:HasProperty>
+              <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6069">
+                <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:UserAccessLevel>
+                <uaBase:NodeId>NodeId{ns=2, id=6069}</uaBase:NodeId>
+                <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596891127860, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >-1</uaBase:ValueRank>
+                <rdfs:label>EngineeringUnits</rdfs:label>
+                <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6033"/>
+                <uaBase:WriteMask>0</uaBase:WriteMask>
+                <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</uaBase:Historizing>
+                <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+                >1</uaBase:AccessLevel>
+                <uaBase:MinimumSamplingInterval rdf:datatype=
+                "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
+                <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=80"/>
+                <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+              </uaBase:PropertyType>
+            </uaBase:HasProperty>
             <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:UserAccessLevel>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >0.0</uaBase:MinimumSamplingInterval>
             <uaBase:WriteMask>0</uaBase:WriteMask>
             <uaBase:BrowseName>CurrentMassFlow</uaBase:BrowseName>
-            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531802237484, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:DisplayName>CurrentMassFlow</uaBase:DisplayName>
             <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5001"/>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+            <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596890966052, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
             <rdfs:label>CurrentMassFlow</rdfs:label>
             <uaBase:HasProperty>
               <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6034">
+                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596891289668, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
                 <uaBase:MinimumSamplingInterval rdf:datatype=
                 "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
@@ -1081,16 +1238,17 @@
                 <uaBase:DisplayName>EURange</uaBase:DisplayName>
                 <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                 >-1</uaBase:ValueRank>
-                <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531802471859, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                 >false</uaBase:Historizing>
+                <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6033"/>
                 <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:UserAccessLevel>
-                <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6033"/>
                 <uaBase:NodeId>NodeId{ns=2, id=6034}</uaBase:NodeId>
               </uaBase:PropertyType>
             </uaBase:HasProperty>
             <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
+            <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >true</uaBase:Historizing>
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >3</uaBase:AccessLevel>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -1117,12 +1275,11 @@
         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#VentilatorType"/>
         <uaBase:NodeClass>Variable</uaBase:NodeClass>
-        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531803424007, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
-        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</uaBase:Historizing>
         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >-1</uaBase:ValueRank>
         <rdfs:label>Setpoint</rdfs:label>
+        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</uaBase:Historizing>
         <uaBase:BrowseName>Setpoint</uaBase:BrowseName>
         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:AccessLevel>
@@ -1133,6 +1290,7 @@
         <uaBase:HasModellingRule rdf:resource="http://auto.tuwien.ac.at/opcua#ns=0,id=78"/>
         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#BaseDataVariableType"/>
         <uaBase:WriteMask>0</uaBase:WriteMask>
+        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596891775092, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:NodeId>NodeId{ns=2, id=6050}</uaBase:NodeId>
         <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:UserAccessLevel>
@@ -1166,13 +1324,13 @@
             <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
             >1</uaBase:AccessLevel>
             <uaBase:ArrayDimensions>[Lorg.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;@5b080f3a</uaBase:ArrayDimensions>
-            <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[5, 0, 0, 0, 115, 112, 101, 101, 100, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531803658382, javaDate=Thu Mar 21 15:46:20 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
             <uaBase:DisplayName>InputArguments</uaBase:DisplayName>
             <uaBase:BrowseName>InputArguments</uaBase:BrowseName>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=7001"/>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
             >1</uaBase:ValueRank>
+            <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[5, 0, 0, 0, 115, 112, 101, 101, 100, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976596892038030, javaDate=Thu Mar 21 17:34:49 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
             >false</uaBase:Historizing>
           </uaBase:PropertyType>
@@ -1214,7 +1372,7 @@
         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >-1</uaBase:ValueRank>
         <uaBase:NodeClass>Variable</uaBase:NodeClass>
-        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531918663260, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597020423679, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5004"/>
       </uaBase:PropertyType>
     </uaBase:HasProperty>
@@ -1225,10 +1383,13 @@
     <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#TemperatureSensorType"/>
     <uaBase:HasComponent>
       <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6007">
+        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</uaBase:Historizing>
         <uaBase:WriteMask>0</uaBase:WriteMask>
         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >-1</uaBase:ValueRank>
         <uaBase:NodeClass>Variable</uaBase:NodeClass>
+        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597020083271, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <rdfs:label>CurrentTemperature</rdfs:label>
         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:AccessLevel>
@@ -1250,17 +1411,14 @@
             <rdfs:label>EURange</rdfs:label>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >500.0</uaBase:MinimumSamplingInterval>
-            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531918428885, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597020213427, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
             >false</uaBase:Historizing>
             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6007"/>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
           </uaBase:PropertyType>
         </uaBase:HasProperty>
-        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531917960135, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5004"/>
-        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-        >false</uaBase:Historizing>
         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
         <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
         >3</uaBase:UserAccessLevel>
@@ -1282,26 +1440,26 @@
         <uaBase:NodeId>NodeId{ns=2, id=5003}</uaBase:NodeId>
         <uaBase:HasComponent>
           <uaBase:BaseDataVariableType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6055">
-            <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
-            >3</uaBase:AccessLevel>
             <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-            >false</uaBase:Historizing>
+            >true</uaBase:Historizing>
             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#BaseDataVariableType"/>
             <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
             <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5003"/>
-            <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
-            >3</uaBase:UserAccessLevel>
             <uaBase:NodeClass>Variable</uaBase:NodeClass>
             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
-            <uaBase:Value>DataValue{value=Variant{value=77.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531917022635, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:MinimumSamplingInterval rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
             >500.0</uaBase:MinimumSamplingInterval>
             <rdfs:label>Setpoint</rdfs:label>
             <uaBase:DisplayName>Setpoint</uaBase:DisplayName>
+            <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+            >7</uaBase:AccessLevel>
             <uaBase:NodeId>NodeId{ns=2, id=6055}</uaBase:NodeId>
             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
             >-1</uaBase:ValueRank>
+            <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
+            >7</uaBase:UserAccessLevel>
             <uaBase:BrowseName>Setpoint</uaBase:BrowseName>
+            <uaBase:Value>DataValue{value=Variant{value=77.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597019562647, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
             <uaBase:WriteMask>0</uaBase:WriteMask>
           </uaBase:BaseDataVariableType>
         </uaBase:HasComponent>
@@ -1321,11 +1479,12 @@
                 >1</uaBase:ValueRank>
                 <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:UserAccessLevel>
+                <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[8, 0, 0, 0, 115, 101, 116, 112, 111, 105, 110, 116, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597019822959, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:DataType>NodeId{ns=0, id=296}</uaBase:DataType>
                 <uaBase:DisplayName>InputArguments</uaBase:DisplayName>
+                <uaBase:ArrayDimensions>[Lorg.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;@29a60c27</uaBase:ArrayDimensions>
                 <rdfs:label>InputArguments</rdfs:label>
                 <uaBase:BrowseName>InputArguments</uaBase:BrowseName>
-                <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[8, 0, 0, 0, 115, 101, 116, 112, 111, 105, 110, 116, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531917491385, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                 <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                 >1</uaBase:AccessLevel>
                 <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -1337,7 +1496,6 @@
                 <uaBase:MinimumSamplingInterval rdf:datatype=
                 "http://www.w3.org/2001/XMLSchema#double">0.0</uaBase:MinimumSamplingInterval>
                 <uaBase:NodeClass>Variable</uaBase:NodeClass>
-                <uaBase:ArrayDimensions>[Lorg.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;@4204541c</uaBase:ArrayDimensions>
               </uaBase:PropertyType>
             </uaBase:HasProperty>
             <uaBase:WriteMask>0</uaBase:WriteMask>
@@ -1368,9 +1526,10 @@
                     <uaBase:DisplayName>T_L3</uaBase:DisplayName>
                     <uaBase:HasComponent>
                       <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6026">
-                        <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
+                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597018060847, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >false</uaBase:Historizing>
+                        >true</uaBase:Historizing>
+                        <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
                         <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                         >3</uaBase:AccessLevel>
@@ -1393,12 +1552,12 @@
                             "http://www.w3.org/2001/XMLSchema#long"
                             >1</uaBase:AccessLevel>
                             <uaBase:WriteMask>0</uaBase:WriteMask>
-                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531915382010, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <rdfs:label>EURange</rdfs:label>
                             <uaBase:NodeId>NodeId{ns=2, id=6027}</uaBase:NodeId>
                             <uaBase:DataType>NodeId{ns=0, id=884}</uaBase:DataType>
                             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                             >-1</uaBase:ValueRank>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597018241063, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:DisplayName>EURange</uaBase:DisplayName>
                             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6026"/>
                             <uaBase:NodeClass>Variable</uaBase:NodeClass>
@@ -1415,7 +1574,6 @@
                         <uaBase:MinimumSamplingInterval rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#double"
                         >0.0</uaBase:MinimumSamplingInterval>
-                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531915147635, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:UserAccessLevel rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#long"
                         >3</uaBase:UserAccessLevel>
@@ -1439,6 +1597,7 @@
                         <uaBase:NodeId>NodeId{ns=2, id=6028}</uaBase:NodeId>
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
                         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597018431291, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5018"/>
                         <uaBase:MinimumSamplingInterval rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#double"
@@ -1448,7 +1607,6 @@
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >-1</uaBase:ValueRank>
                         <uaBase:DisplayName>SerialNumber</uaBase:DisplayName>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531915616385, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                       </uaBase:PropertyType>
                     </uaBase:HasProperty>
                     <rdfs:label>T_L3</rdfs:label>
@@ -1464,8 +1622,6 @@
                     <uaBase:HasComponent>
                       <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6030">
                         <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
-                        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >false</uaBase:Historizing>
                         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                         <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
                         <uaBase:HasProperty>
@@ -1482,8 +1638,8 @@
                             <uaBase:DisplayName>EURange</uaBase:DisplayName>
                             <uaBase:NodeClass>Variable</uaBase:NodeClass>
                             <uaBase:WriteMask>0</uaBase:WriteMask>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597018901855, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:DataType>NodeId{ns=0, id=884}</uaBase:DataType>
-                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531916319510, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                             >-1</uaBase:ValueRank>
                             <uaBase:Historizing rdf:datatype=
@@ -1497,6 +1653,7 @@
                             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
                           </uaBase:PropertyType>
                         </uaBase:HasProperty>
+                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597018791723, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:WriteMask>0</uaBase:WriteMask>
                         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5019"/>
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
@@ -1505,6 +1662,8 @@
                         <uaBase:MinimumSamplingInterval rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#double"
                         >0.0</uaBase:MinimumSamplingInterval>
+                        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</uaBase:Historizing>
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >-1</uaBase:ValueRank>
                         <uaBase:UserAccessLevel rdf:datatype=
@@ -1512,7 +1671,6 @@
                         >3</uaBase:UserAccessLevel>
                         <uaBase:NodeId>NodeId{ns=2, id=6030}</uaBase:NodeId>
                         <rdfs:label>CurrentTemperature</rdfs:label>
-                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531916085135, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
                         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
                       </uaBase:AnalogItemType>
@@ -1528,12 +1686,12 @@
                         <uaBase:UserAccessLevel rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#long"
                         >3</uaBase:UserAccessLevel>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597019092083, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >-1</uaBase:ValueRank>
                         <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                         >false</uaBase:Historizing>
                         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5019"/>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531916553885, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                         >3</uaBase:AccessLevel>
                         <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
@@ -1597,10 +1755,10 @@
                             <uaBase:NodeId>NodeId{ns=2, id=6015}</uaBase:NodeId>
                             <rdfs:label>EURange</rdfs:label>
                             <uaBase:DataType>NodeId{ns=0, id=884}</uaBase:DataType>
-                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531913975760, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                             >-1</uaBase:ValueRank>
                             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6014"/>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597016478951, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:DisplayName>EURange</uaBase:DisplayName>
                             <uaBase:Historizing rdf:datatype=
                             "http://www.w3.org/2001/XMLSchema#boolean"
@@ -1614,13 +1772,42 @@
                           </uaBase:PropertyType>
                         </uaBase:HasProperty>
                         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
-                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531913726737, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <rdfs:label>CurrentTemperature</rdfs:label>
+                        <uaBase:HasProperty>
+                          <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6068">
+                            <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                            <uaBase:Historizing rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#boolean"
+                            >false</uaBase:Historizing>
+                            <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                            <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6014"/>
+                            <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                            <uaBase:NodeId>NodeId{ns=2, id=6068}</uaBase:NodeId>
+                            <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                            <uaBase:UserAccessLevel rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#long"
+                            >1</uaBase:UserAccessLevel>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597016318759, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                            <uaBase:WriteMask>0</uaBase:WriteMask>
+                            <uaBase:AccessLevel rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#long"
+                            >1</uaBase:AccessLevel>
+                            <uaBase:MinimumSamplingInterval rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#double"
+                            >0.0</uaBase:MinimumSamplingInterval>
+                            <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                            <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >-1</uaBase:ValueRank>
+                            <rdfs:label>EngineeringUnits</rdfs:label>
+                            <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                          </uaBase:PropertyType>
+                        </uaBase:HasProperty>
                         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5009"/>
                         <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
+                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597016128531, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
                         <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >false</uaBase:Historizing>
+                        >true</uaBase:Historizing>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                         >3</uaBase:AccessLevel>
                       </uaBase:AnalogItemType>
@@ -1632,11 +1819,11 @@
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >-1</uaBase:ValueRank>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597016779311, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:MinimumSamplingInterval rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#double"
                         >0.0</uaBase:MinimumSamplingInterval>
                         <uaBase:DataType>NodeId{ns=0, id=12}</uaBase:DataType>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531914210135, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <rdfs:label>SerialNumber</rdfs:label>
                         <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
                         <uaBase:DisplayName>SerialNumber</uaBase:DisplayName>
@@ -1685,9 +1872,9 @@
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >-1</uaBase:ValueRank>
                         <uaBase:DisplayName>SerialNumber</uaBase:DisplayName>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531914678885, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
                         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5012"/>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597017670379, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                         <uaBase:WriteMask>0</uaBase:WriteMask>
                         <uaBase:NodeId>NodeId{ns=2, id=6025}</uaBase:NodeId>
@@ -1699,18 +1886,18 @@
                     <uaBase:HasComponent>
                       <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6023">
                         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
-                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531914444510, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
                         <uaBase:NodeId>NodeId{ns=2, id=6023}</uaBase:NodeId>
+                        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</uaBase:Historizing>
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >-1</uaBase:ValueRank>
                         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
-                        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >false</uaBase:Historizing>
                         <uaBase:MinimumSamplingInterval rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#double"
                         >0.0</uaBase:MinimumSamplingInterval>
                         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5012"/>
+                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597017189803, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <rdfs:label>CurrentTemperature</rdfs:label>
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
@@ -1736,12 +1923,12 @@
                             <uaBase:Historizing rdf:datatype=
                             "http://www.w3.org/2001/XMLSchema#boolean"
                             >false</uaBase:Historizing>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597017380031, javaDate=Thu Mar 21 17:35:01 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:WriteMask>0</uaBase:WriteMask>
                             <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                             >-1</uaBase:ValueRank>
                             <uaBase:NodeId>NodeId{ns=2, id=6024}</uaBase:NodeId>
                             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6023"/>
-                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531914678885, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:DisplayName>EURange</uaBase:DisplayName>
                           </uaBase:PropertyType>
                         </uaBase:HasProperty>
@@ -1788,23 +1975,23 @@
                     <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                     <uaBase:DataType>NodeId{ns=0, id=12}</uaBase:DataType>
                     <uaBase:NodeId>NodeId{ns=2, id=6061}</uaBase:NodeId>
+                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597021114507, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:AccessLevel>
                     <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
                     <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5021"/>
-                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531919835135, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                   </uaBase:PropertyType>
                 </uaBase:HasProperty>
                 <uaBase:DisplayName>T_i</uaBase:DisplayName>
                 <uaBase:HasComponent>
                   <uaBase:AnalogItemType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6059">
                     <uaBase:NodeClass>Variable</uaBase:NodeClass>
-                    <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531919132010, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:WriteMask>0</uaBase:WriteMask>
                     <uaBase:BrowseName>CurrentTemperature</uaBase:BrowseName>
                     <rdfs:label>CurrentTemperature</rdfs:label>
                     <uaBase:NodeId>NodeId{ns=2, id=6059}</uaBase:NodeId>
                     <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                    <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597020774099, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:MinimumSamplingInterval rdf:datatype=
                     "http://www.w3.org/2001/XMLSchema#double"
                     >0.0</uaBase:MinimumSamplingInterval>
@@ -1823,7 +2010,6 @@
                         >1</uaBase:AccessLevel>
                         <rdfs:label>EURange</rdfs:label>
                         <uaBase:BrowseName>EURange</uaBase:BrowseName>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531919366385, javaDate=Thu Mar 21 15:46:31 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:UserAccessLevel rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#long"
                         >1</uaBase:UserAccessLevel>
@@ -1835,12 +2021,13 @@
                         <uaBase:WriteMask>0</uaBase:WriteMask>
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
                         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597020904255, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                       </uaBase:PropertyType>
                     </uaBase:HasProperty>
                     <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
                     <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5021"/>
                     <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                    >false</uaBase:Historizing>
+                    >true</uaBase:Historizing>
                     <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
                     <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                     >-1</uaBase:ValueRank>
@@ -1899,8 +2086,8 @@
                         >0.0</uaBase:MinimumSamplingInterval>
                         <uaBase:BrowseName>SerialNumber</uaBase:BrowseName>
                         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597023166967, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <rdfs:label>SerialNumber</rdfs:label>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531921944510, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                       </uaBase:PropertyType>
                     </uaBase:HasProperty>
                     <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5005"/>
@@ -1915,9 +2102,11 @@
                         >0.0</uaBase:MinimumSamplingInterval>
                         <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                         <uaBase:WriteMask>0</uaBase:WriteMask>
-                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531921241385, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</uaBase:Historizing>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                         >3</uaBase:AccessLevel>
+                        <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597022556235, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:HasProperty>
                           <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6057">
                             <uaBase:WriteMask>0</uaBase:WriteMask>
@@ -1930,9 +2119,9 @@
                             >1</uaBase:UserAccessLevel>
                             <rdfs:label>EURange</rdfs:label>
                             <uaBase:BrowseName>EURange</uaBase:BrowseName>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597022926679, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
                             <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
-                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531921241385, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                             <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6056"/>
                             <uaBase:MinimumSamplingInterval rdf:datatype=
                             "http://www.w3.org/2001/XMLSchema#double"
@@ -1947,6 +2136,35 @@
                             >false</uaBase:Historizing>
                           </uaBase:PropertyType>
                         </uaBase:HasProperty>
+                        <uaBase:HasProperty>
+                          <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6062">
+                            <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6056"/>
+                            <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
+                            <uaBase:DisplayName>EngineeringUnits</uaBase:DisplayName>
+                            <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597022686391, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
+                            <uaBase:BrowseName>EngineeringUnits</uaBase:BrowseName>
+                            <uaBase:AccessLevel rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#long"
+                            >1</uaBase:AccessLevel>
+                            <uaBase:Historizing rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#boolean"
+                            >false</uaBase:Historizing>
+                            <uaBase:NodeId>NodeId{ns=2, id=6062}</uaBase:NodeId>
+                            <rdfs:label>EngineeringUnits</rdfs:label>
+                            <uaBase:DataType>NodeId{ns=0, id=887}</uaBase:DataType>
+                            <uaBase:UserAccessLevel rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#long"
+                            >1</uaBase:UserAccessLevel>
+                            <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >-1</uaBase:ValueRank>
+                            <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                            <uaBase:NodeClass>Variable</uaBase:NodeClass>
+                            <uaBase:MinimumSamplingInterval rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#double"
+                            >0.0</uaBase:MinimumSamplingInterval>
+                            <uaBase:WriteMask>0</uaBase:WriteMask>
+                          </uaBase:PropertyType>
+                        </uaBase:HasProperty>
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
                         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#AnalogItemType"/>
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -1955,8 +2173,6 @@
                         <uaBase:NodeId>NodeId{ns=2, id=6056}</uaBase:NodeId>
                         <rdfs:label>CurrentMassFlow</rdfs:label>
                         <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5020"/>
-                        <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                        >false</uaBase:Historizing>
                         <uaBase:DataType>NodeId{ns=0, id=11}</uaBase:DataType>
                         <uaBase:UserAccessLevel rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#long"
@@ -1977,17 +2193,18 @@
                     <uaBase:HasProperty>
                       <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6010">
                         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=7006"/>
-                        <uaBase:WriteMask>0</uaBase:WriteMask>
                         <uaBase:NodeId>NodeId{ns=2, id=6010}</uaBase:NodeId>
+                        <uaBase:WriteMask>0</uaBase:WriteMask>
+                        <uaBase:ArrayDimensions>[Lorg.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;@1ca25c47</uaBase:ArrayDimensions>
                         <uaBase:UserAccessLevel rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#long"
                         >1</uaBase:UserAccessLevel>
                         <uaBase:DisplayName>InputArguments</uaBase:DisplayName>
                         <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                        <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[5, 0, 0, 0, 115, 112, 101, 101, 100, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597023777699, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                         >1</uaBase:ValueRank>
                         <uaBase:BrowseName>InputArguments</uaBase:BrowseName>
-                        <uaBase:Value>DataValue{value=Variant{value=[ExtensionObject{encoded=ByteString{bytes=[5, 0, 0, 0, 115, 112, 101, 101, 100, 0, 11, -1, -1, -1, -1, 0, 0, 0, 0, 0]}, encodingTypeId=NodeId{ns=0, id=298}}]}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531922882010, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                         >1</uaBase:AccessLevel>
                         <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
@@ -1998,7 +2215,6 @@
                         >0.0</uaBase:MinimumSamplingInterval>
                         <uaBase:DataType>NodeId{ns=0, id=296}</uaBase:DataType>
                         <uaBase:NodeClass>Variable</uaBase:NodeClass>
-                        <uaBase:ArrayDimensions>[Lorg.eclipse.milo.opcua.stack.core.types.builtin.unsigned.UInteger;@60fa3495</uaBase:ArrayDimensions>
                         <rdfs:label>InputArguments</rdfs:label>
                       </uaBase:PropertyType>
                     </uaBase:HasProperty>
@@ -2018,15 +2234,15 @@
                 <uaBase:NodeClass>Object</uaBase:NodeClass>
                 <uaBase:HasComponent>
                   <uaBase:BaseDataVariableType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6052">
-                    <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531922413260, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:NodeClass>Variable</uaBase:NodeClass>
                     <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:UserAccessLevel>
                     <uaBase:NodeId>NodeId{ns=2, id=6052}</uaBase:NodeId>
                     <uaBase:BrowseName>Setpoint</uaBase:BrowseName>
+                    <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597023477339, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:DisplayName>Setpoint</uaBase:DisplayName>
                     <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                    >false</uaBase:Historizing>
+                    >true</uaBase:Historizing>
                     <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:AccessLevel>
                     <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#BaseDataVariableType"/>
@@ -2059,7 +2275,6 @@
                 <uaBase:NodeClass>Object</uaBase:NodeClass>
                 <uaBase:HasProperty>
                   <uaBase:PropertyType rdf:about="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6022">
-                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531920538260, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:UserAccessLevel>
                     <uaBase:DisplayName>SerialNumber</uaBase:DisplayName>
@@ -2071,6 +2286,7 @@
                     <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:AccessLevel>
                     <uaBase:HasTypeDefinition rdf:resource="http://auto.tuwien.ac.at/opcua#PropertyType"/>
+                    <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597022055635, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:WriteMask>0</uaBase:WriteMask>
                     <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5011"/>
                     <rdfs:label>SerialNumber</rdfs:label>
@@ -2090,13 +2306,15 @@
                     <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:AccessLevel>
                     <uaBase:DisplayName>CurrentTemperature</uaBase:DisplayName>
-                    <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531920069510, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <uaBase:NodeClass>Variable</uaBase:NodeClass>
                     <uaBase:ComponentOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=5011"/>
                     <uaBase:WriteMask>0</uaBase:WriteMask>
+                    <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</uaBase:Historizing>
                     <uaBase:MinimumSamplingInterval rdf:datatype=
                     "http://www.w3.org/2001/XMLSchema#double"
                     >0.0</uaBase:MinimumSamplingInterval>
+                    <uaBase:Value>DataValue{value=Variant{value=0.0}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597021404855, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                     <rdfs:label>CurrentTemperature</rdfs:label>
                     <uaBase:ValueRank rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
                     >-1</uaBase:ValueRank>
@@ -2120,16 +2338,14 @@
                         <uaBase:MinimumSamplingInterval rdf:datatype=
                         "http://www.w3.org/2001/XMLSchema#double"
                         >0.0</uaBase:MinimumSamplingInterval>
-                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976531920303885, javaDate=Thu Mar 21 15:46:32 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:AccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                         >1</uaBase:AccessLevel>
                         <uaBase:PropertyOf rdf:resource="http://auto.tuwien.ac.at/packed-bed-regenerator#ns=2,id=6020"/>
+                        <uaBase:Value>DataValue{value=Variant{value=null}, status=StatusCode{name=Good, value=0x00000000, quality=good}, sourceTime=DateTime{utcTime=131976597021745263, javaDate=Thu Mar 21 17:35:02 CET 2019}, serverTime=DateTime{utcTime=0, javaDate=Mon Jan 01 01:00:00 CET 1601}}</uaBase:Value>
                         <uaBase:BrowseName>EURange</uaBase:BrowseName>
                       </uaBase:PropertyType>
                     </uaBase:HasProperty>
                     <uaBase:NodeId>NodeId{ns=2, id=6020}</uaBase:NodeId>
-                    <uaBase:Historizing rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-                    >false</uaBase:Historizing>
                     <uaBase:UserAccessLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#long"
                     >3</uaBase:UserAccessLevel>
                     <uaBase:UserWriteMask>0</uaBase:UserWriteMask>
