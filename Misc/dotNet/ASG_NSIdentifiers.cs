@@ -35,7 +35,7 @@
 ** The complete license agreement can be found here:
 ** http://unifiedautomation.com/License/SLA/2.7/
 **
-** Created: 14.03.2019
+** Created: 21.03.2019
 **
 ******************************************************************************/
 
@@ -317,6 +317,11 @@ namespace ASG.ASG_NS
         public const uint BulkContainerType_TemperatureSensor_CurrentTemperature = 6045;
 
         /// <summary>
+        /// The identifier for the EngineeringUnits Variable.
+        /// </summary>
+        public const uint BulkContainerType_TemperatureSensor_CurrentTemperature_EngineeringUnits = 6067;
+
+        /// <summary>
         /// The identifier for the EURange Variable.
         /// </summary>
         public const uint BulkContainerType_TemperatureSensor_CurrentTemperature_EURange = 6046;
@@ -342,6 +347,11 @@ namespace ASG.ASG_NS
         public const uint HeaterType_T_H_CurrentTemperature = 6037;
 
         /// <summary>
+        /// The identifier for the EngineeringUnits Variable.
+        /// </summary>
+        public const uint HeaterType_T_H_CurrentTemperature_EngineeringUnits = 6065;
+
+        /// <summary>
         /// The identifier for the EURange Variable.
         /// </summary>
         public const uint HeaterType_T_H_CurrentTemperature_EURange = 6038;
@@ -357,6 +367,11 @@ namespace ASG.ASG_NS
         public const uint PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature = 6017;
 
         /// <summary>
+        /// The identifier for the EngineeringUnits Variable.
+        /// </summary>
+        public const uint PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EngineeringUnits = 6064;
+
+        /// <summary>
         /// The identifier for the EURange Variable.
         /// </summary>
         public const uint PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EURange = 6018;
@@ -370,6 +385,11 @@ namespace ASG.ASG_NS
         /// The identifier for the CurrentTemperature Variable.
         /// </summary>
         public const uint PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature = 6011;
+
+        /// <summary>
+        /// The identifier for the EngineeringUnits Variable.
+        /// </summary>
+        public const uint PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature_EngineeringUnits = 6063;
 
         /// <summary>
         /// The identifier for the EURange Variable.
@@ -397,6 +417,11 @@ namespace ASG.ASG_NS
         public const uint PackedBedRegeneratorType_Heater_T_H_CurrentTemperature = 6041;
 
         /// <summary>
+        /// The identifier for the EngineeringUnits Variable.
+        /// </summary>
+        public const uint PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EngineeringUnits = 6066;
+
+        /// <summary>
         /// The identifier for the EURange Variable.
         /// </summary>
         public const uint PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EURange = 6042;
@@ -422,6 +447,11 @@ namespace ASG.ASG_NS
         public const uint VentilatorType_MassFlowSensor_CurrentMassFlow = 6033;
 
         /// <summary>
+        /// The identifier for the EngineeringUnits Variable.
+        /// </summary>
+        public const uint VentilatorType_MassFlowSensor_CurrentMassFlow_EngineeringUnits = 6069;
+
+        /// <summary>
         /// The identifier for the EURange Variable.
         /// </summary>
         public const uint VentilatorType_MassFlowSensor_CurrentMassFlow_EURange = 6034;
@@ -445,6 +475,11 @@ namespace ASG.ASG_NS
         /// The identifier for the CurrentTemperature Object.
         /// </summary>
         public const uint PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature = 6014;
+
+        /// <summary>
+        /// The identifier for the EngineeringUnits Object.
+        /// </summary>
+        public const uint PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature_EngineeringUnits = 6068;
 
         /// <summary>
         /// The identifier for the EURange Object.
@@ -560,6 +595,11 @@ namespace ASG.ASG_NS
         /// The identifier for the CurrentMassFlow Object.
         /// </summary>
         public const uint PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow = 6056;
+
+        /// <summary>
+        /// The identifier for the EngineeringUnits Object.
+        /// </summary>
+        public const uint PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow_EngineeringUnits = 6062;
 
         /// <summary>
         /// The identifier for the EURange Object.
@@ -862,6 +902,11 @@ namespace ASG.ASG_NS
         public static readonly ExpandedNodeId BulkContainerType_TemperatureSensor_CurrentTemperature = new ExpandedNodeId(Variables.BulkContainerType_TemperatureSensor_CurrentTemperature, Namespaces.ASG_NS);
 
         /// <summary>
+        /// The identifier for the BulkContainerType_TemperatureSensor_CurrentTemperature_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId BulkContainerType_TemperatureSensor_CurrentTemperature_EngineeringUnits = new ExpandedNodeId(Variables.BulkContainerType_TemperatureSensor_CurrentTemperature_EngineeringUnits, Namespaces.ASG_NS);
+
+        /// <summary>
         /// The identifier for the BulkContainerType_TemperatureSensor_CurrentTemperature_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId BulkContainerType_TemperatureSensor_CurrentTemperature_EURange = new ExpandedNodeId(Variables.BulkContainerType_TemperatureSensor_CurrentTemperature_EURange, Namespaces.ASG_NS);
@@ -887,6 +932,11 @@ namespace ASG.ASG_NS
         public static readonly ExpandedNodeId HeaterType_T_H_CurrentTemperature = new ExpandedNodeId(Variables.HeaterType_T_H_CurrentTemperature, Namespaces.ASG_NS);
 
         /// <summary>
+        /// The identifier for the HeaterType_T_H_CurrentTemperature_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId HeaterType_T_H_CurrentTemperature_EngineeringUnits = new ExpandedNodeId(Variables.HeaterType_T_H_CurrentTemperature_EngineeringUnits, Namespaces.ASG_NS);
+
+        /// <summary>
         /// The identifier for the HeaterType_T_H_CurrentTemperature_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId HeaterType_T_H_CurrentTemperature_EURange = new ExpandedNodeId(Variables.HeaterType_T_H_CurrentTemperature_EURange, Namespaces.ASG_NS);
@@ -902,6 +952,11 @@ namespace ASG.ASG_NS
         public static readonly ExpandedNodeId PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature = new ExpandedNodeId(Variables.PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature, Namespaces.ASG_NS);
 
         /// <summary>
+        /// The identifier for the PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EngineeringUnits = new ExpandedNodeId(Variables.PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EngineeringUnits, Namespaces.ASG_NS);
+
+        /// <summary>
         /// The identifier for the PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EURange = new ExpandedNodeId(Variables.PackedBedRegeneratorType_TemperatureSensor_CurrentTemperature_EURange, Namespaces.ASG_NS);
@@ -915,6 +970,11 @@ namespace ASG.ASG_NS
         /// The identifier for the PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature Variable.
         /// </summary>
         public static readonly ExpandedNodeId PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature = new ExpandedNodeId(Variables.PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature, Namespaces.ASG_NS);
+
+        /// <summary>
+        /// The identifier for the PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature_EngineeringUnits = new ExpandedNodeId(Variables.PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature_EngineeringUnits, Namespaces.ASG_NS);
 
         /// <summary>
         /// The identifier for the PackedBedRegeneratorType_BulkContainer_TemperatureSensor_CurrentTemperature_EURange Variable.
@@ -942,6 +1002,11 @@ namespace ASG.ASG_NS
         public static readonly ExpandedNodeId PackedBedRegeneratorType_Heater_T_H_CurrentTemperature = new ExpandedNodeId(Variables.PackedBedRegeneratorType_Heater_T_H_CurrentTemperature, Namespaces.ASG_NS);
 
         /// <summary>
+        /// The identifier for the PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EngineeringUnits = new ExpandedNodeId(Variables.PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EngineeringUnits, Namespaces.ASG_NS);
+
+        /// <summary>
         /// The identifier for the PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EURange = new ExpandedNodeId(Variables.PackedBedRegeneratorType_Heater_T_H_CurrentTemperature_EURange, Namespaces.ASG_NS);
@@ -967,6 +1032,11 @@ namespace ASG.ASG_NS
         public static readonly ExpandedNodeId VentilatorType_MassFlowSensor_CurrentMassFlow = new ExpandedNodeId(Variables.VentilatorType_MassFlowSensor_CurrentMassFlow, Namespaces.ASG_NS);
 
         /// <summary>
+        /// The identifier for the VentilatorType_MassFlowSensor_CurrentMassFlow_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId VentilatorType_MassFlowSensor_CurrentMassFlow_EngineeringUnits = new ExpandedNodeId(Variables.VentilatorType_MassFlowSensor_CurrentMassFlow_EngineeringUnits, Namespaces.ASG_NS);
+
+        /// <summary>
         /// The identifier for the VentilatorType_MassFlowSensor_CurrentMassFlow_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId VentilatorType_MassFlowSensor_CurrentMassFlow_EURange = new ExpandedNodeId(Variables.VentilatorType_MassFlowSensor_CurrentMassFlow_EURange, Namespaces.ASG_NS);
@@ -990,6 +1060,11 @@ namespace ASG.ASG_NS
         /// The identifier for the PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature Variable.
         /// </summary>
         public static readonly ExpandedNodeId PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature = new ExpandedNodeId(Variables.PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature, Namespaces.ASG_NS);
+
+        /// <summary>
+        /// The identifier for the PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature_EngineeringUnits = new ExpandedNodeId(Variables.PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature_EngineeringUnits, Namespaces.ASG_NS);
 
         /// <summary>
         /// The identifier for the PackedBedRegenerator_BulkContainer_T_L1_CurrentTemperature_EURange Variable.
@@ -1105,6 +1180,11 @@ namespace ASG.ASG_NS
         /// The identifier for the PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow Variable.
         /// </summary>
         public static readonly ExpandedNodeId PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow = new ExpandedNodeId(Variables.PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow, Namespaces.ASG_NS);
+
+        /// <summary>
+        /// The identifier for the PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow_EngineeringUnits Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow_EngineeringUnits = new ExpandedNodeId(Variables.PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow_EngineeringUnits, Namespaces.ASG_NS);
 
         /// <summary>
         /// The identifier for the PackedBedRegenerator_Ventilator_m_flow_CurrentMassFlow_EURange Variable.

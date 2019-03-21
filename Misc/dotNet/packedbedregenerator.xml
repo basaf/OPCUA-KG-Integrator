@@ -18,7 +18,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="w2C8XfXTgxgz97SFxV/s8w==" Version="1.6.2"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="2ITGi+1/QpGRejimUIOrPg==" Version="1.6.2"/>
         </Extension>
     </Extensions>
     <UAObjectType IsAbstract="true" NodeId="ns=1;i=1002" BrowseName="1:BaseSensorType">
@@ -43,7 +43,7 @@
             <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6004" BrowseName="1:CurrentMassFlow" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6004" BrowseName="1:CurrentMassFlow" AccessLevel="3">
         <DisplayName>CurrentMassFlow</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -79,7 +79,7 @@
             <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=6002" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=6002" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -125,17 +125,26 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6045" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6045" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6067</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6046</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6045" NodeId="ns=1;i=6067" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6045</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6045" NodeId="ns=1;i=6046" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -162,7 +171,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=5013</Reference>
         </References>
     </UAObjectType>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=6053" BrowseName="1:Setpoint" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=6053" BrowseName="1:Setpoint" AccessLevel="3">
         <DisplayName>Setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -216,17 +225,26 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5013" NodeId="ns=1;i=6037" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5013" NodeId="ns=1;i=6037" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5013</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6065</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6038</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6037" NodeId="ns=1;i=6065" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6037</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6037" NodeId="ns=1;i=6038" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -264,17 +282,26 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5010" NodeId="ns=1;i=6017" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5010" NodeId="ns=1;i=6017" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6064</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6018</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6017" NodeId="ns=1;i=6064" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6017</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6017" NodeId="ns=1;i=6018" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -311,17 +338,26 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6011" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=6011" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5007</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6063</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6012</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6011" NodeId="ns=1;i=6063" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6011</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6011" NodeId="ns=1;i=6012" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -350,7 +386,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=5015</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6054" BrowseName="1:Setpoint" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6054" BrowseName="1:Setpoint" AccessLevel="3">
         <DisplayName>Setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -404,17 +440,26 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6041" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6041" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5015</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6066</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6042</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6041" NodeId="ns=1;i=6066" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6041</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6041" NodeId="ns=1;i=6042" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -442,7 +487,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6051" BrowseName="1:Setpoint" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6051" BrowseName="1:Setpoint" AccessLevel="3">
         <DisplayName>Setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -505,17 +550,26 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6035</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=6033" BrowseName="1:CurrentMassFlow" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=6033" BrowseName="1:CurrentMassFlow" AccessLevel="3">
         <DisplayName>CurrentMassFlow</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6069</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6034</Reference>
             <Reference ReferenceType="HasModellingRule">i=78</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6033" NodeId="ns=1;i=6069" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6033</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6033" NodeId="ns=1;i=6034" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -533,7 +587,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5001</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=6050" BrowseName="1:Setpoint" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=6050" BrowseName="1:Setpoint" AccessLevel="3">
         <DisplayName>Setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -609,16 +663,24 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6014" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5009" NodeId="ns=1;i=6014" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6068</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6015</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6014" NodeId="ns=1;i=6068" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6014</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6014" NodeId="ns=1;i=6015" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -643,7 +705,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5012" NodeId="ns=1;i=6023" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5012" NodeId="ns=1;i=6023" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -677,7 +739,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6026" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6026" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -711,7 +773,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6030" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6030" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -746,7 +808,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=5004</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=6055" BrowseName="1:Setpoint" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=6055" BrowseName="1:Setpoint" AccessLevel="7">
         <DisplayName>Setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
@@ -796,7 +858,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6007" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6007" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -830,7 +892,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6059" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6059" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -864,7 +926,7 @@
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6020" BrowseName="1:CurrentTemperature" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6020" BrowseName="1:CurrentTemperature" AccessLevel="3">
         <DisplayName>CurrentTemperature</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
@@ -908,16 +970,24 @@
             <Reference ReferenceType="HasProperty">ns=1;i=6058</Reference>
         </References>
     </UAObject>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6056" BrowseName="1:CurrentMassFlow" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6056" BrowseName="1:CurrentMassFlow" AccessLevel="3">
         <DisplayName>CurrentMassFlow</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
             <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5020</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6062</Reference>
             <Reference ReferenceType="HasProperty">ns=1;i=6057</Reference>
         </References>
         <Value>
             <uax:Double>0</uax:Double>
         </Value>
+    </UAVariable>
+    <UAVariable DataType="EUInformation" ParentNodeId="ns=1;i=6056" NodeId="ns=1;i=6062" BrowseName="EngineeringUnits">
+        <DisplayName>EngineeringUnits</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6056</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
     </UAVariable>
     <UAVariable DataType="Range" ParentNodeId="ns=1;i=6056" NodeId="ns=1;i=6057" BrowseName="EURange">
         <DisplayName>EURange</DisplayName>
@@ -933,7 +1003,7 @@
             <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
         </References>
     </UAVariable>
-    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6052" BrowseName="1:Setpoint" AccessLevel="3">
+    <UAVariable DataType="Double" Historizing="true" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=6052" BrowseName="1:Setpoint" AccessLevel="3">
         <DisplayName>Setpoint</DisplayName>
         <References>
             <Reference ReferenceType="HasTypeDefinition">i=63</Reference>

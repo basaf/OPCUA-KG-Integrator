@@ -97,6 +97,7 @@ namespace ASG.ASG_NS
 
                 // Set the values
                 myPackedBedRegeneratorModel.Heater.Setpoint = 77.0;
+
             }
             catch (Exception e)
             {
@@ -122,6 +123,101 @@ namespace ASG.ASG_NS
         }
         #endregion
 
+
+        class MyHistoryDataEnumerator : IHistoryDataEnumerator
+        {
+            Dictionary<DateTime, double> keyValuePairs = new Dictionary<DateTime, double>();
+            int keyValuePairsPosition = 0;
+
+            public void init()
+            {
+                if(keyValuePairs.Count == 0)
+                {
+                    keyValuePairs.Add(new DateTime(2019, 3, 21, 16, 52, 10), 5.1);
+                    keyValuePairs.Add(new DateTime(2019, 3, 21, 16, 53, 20), 8.2);
+                    keyValuePairs.Add(new DateTime(2019, 3, 21, 16, 54, 30), 4.3);
+                    keyValuePairs.Add(new DateTime(2019, 3, 21, 16, 55, 40), 3.4);
+                    keyValuePairs.Add(new DateTime(2019, 3, 21, 16, 56, 50), 2.5);
+                    keyValuePairs.Add(new DateTime(2019, 3, 21, 16, 57, 00), 5.6);
+                }
+            }
+
+            public ModificationInfo GetModificationInfo()
+            {
+                throw new NotImplementedException();
+            }
+
+            public DataValue GetValue()
+            {
+                DataValue dv = new DataValue();
+                dv.Value = keyValuePairs.Values.ElementAt(keyValuePairsPosition);
+                dv.SourceTimestamp = keyValuePairs.Keys.ElementAt(keyValuePairsPosition);
+                dv.ServerTimestamp = keyValuePairs.Keys.ElementAt(keyValuePairsPosition);
+                dv.StatusCode.IsGood();
+                return dv;
+            }
+
+            public bool MoveBack()
+            {
+                if (keyValuePairsPosition > 0)
+                {
+                    keyValuePairsPosition--;
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            public bool MoveNext()
+            {
+                if (keyValuePairsPosition < keyValuePairs.Count-1)
+                {
+                    keyValuePairsPosition++;
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            public void Reset(DateTime timestamp)
+            {
+                keyValuePairsPosition = 0;
+            }
+        }
+
+        // TFR
+        class MyHistoryDataSource : IHistoryDataSource
+        {
+            public IHistoryDataEnumerator GetEnumerator(RequestContext context, DateTime timestamp)
+            {
+                MyHistoryDataEnumerator historyDataEnumerator = new MyHistoryDataEnumerator();
+                historyDataEnumerator.init();
+                return historyDataEnumerator;
+            }
+        }
+
+        // TFR
+        protected override HistoryDataReadRawContinuationPoint CreateHistoryContinuationPoint(
+            RequestContext context,
+            ReadRawModifiedDetails details,
+            HistoryDataHandle nodeHandle,
+            string indexRange,
+            QualifiedName dataEncoding)
+        {
+            IHistoryDataSource myHistoryDataSource = new MyHistoryDataSource();
+            HistoryDataRawReader reader = new HistoryDataRawReader();
+            reader.Initialize(context, myHistoryDataSource, details);
+            HistoryDataReadRawContinuationPoint cp = new HistoryDataReadRawContinuationPoint()
+            {
+                Reader = reader,
+                NumValuesPerNode = details.NumValuesPerNode,
+                ApplyIndexRangeAndEncoding = !String.IsNullOrEmpty(indexRange) || !QualifiedName.IsNull(dataEncoding),
+                IndexRange = indexRange,
+                DataEncoding = dataEncoding
+            };
+
+            return cp;
+        }
         #region Private Methods
         #endregion
 
