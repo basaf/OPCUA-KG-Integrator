@@ -1,7 +1,8 @@
 package virtualOPCEndpoint;
 
+import java.util.Date;
 public interface ExtConnector {
 
 	public String readValue(Integer NamespaceIndex,String NodeIDString);
-	public String readhistData(Integer NamespaceIndex,String NodeIDString, String startTime, String stopTime);
+	public TimeSeries readhistData(Integer NamespaceIndex,String NodeIDString, Date startTime, Date stopTime);
 }

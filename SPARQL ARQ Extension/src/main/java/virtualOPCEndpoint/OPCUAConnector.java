@@ -2,6 +2,7 @@ package virtualOPCEndpoint;
 
 import static org.eclipse.milo.opcua.stack.core.util.ConversionUtil.l;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,6 +23,8 @@ import org.eclipse.milo.opcua.stack.core.types.structured.HistoryReadResponse;
 import org.eclipse.milo.opcua.stack.core.types.structured.HistoryReadResult;
 import org.eclipse.milo.opcua.stack.core.types.structured.HistoryReadValueId;
 import org.eclipse.milo.opcua.stack.core.types.structured.ReadRawModifiedDetails;
+import java.util.Date;
+import static org.eclipse.milo.opcua.stack.core.types.builtin.unsigned.Unsigned.uint;
 
 public class OPCUAConnector implements ExtConnector{
 
@@ -81,40 +84,59 @@ public class OPCUAConnector implements ExtConnector{
 		
 	}
 
-	public String readhistData(Integer NamespaceIndex,String NodeIDString, String startTime, String stopTime) {
+	public TimeSeries readhistData(Integer NamespaceIndex,String NodeIDString, Date startTime, Date stopTime) {
 		
 		OpcUaClient client=connectToEndpoint();
 		
 		//defining node id
 		NodeId nodeId = new NodeId(NamespaceIndex, NodeIDString);
 		
+		DateTime startDateTime= new DateTime(startTime);
+		DateTime stopDateTime=new DateTime(stopTime);
+		
 		HistoryReadDetails historyReadDetails = new ReadRawModifiedDetails(
                 false,
-                DateTime.MIN_VALUE,
-                DateTime.now(),
-                UInteger.MAX,//uint(0), // both work
+               // DateTime.MIN_VALUE,
+                startDateTime,
+                stopDateTime,
+                uint(0),//UInteger.MAX,//uint(0), // both work
                 true
-        );
+        ); 
 		
         HistoryReadValueId histReadValueId= new HistoryReadValueId(nodeId, null, QualifiedName.NULL_VALUE, ByteString.NULL_VALUE);
         
         
         //unbedingt false -> keine Ahnung warum!
+        TimeSeries timeSeries=null;
         try {
-		HistoryReadResponse hist = client.historyRead(historyReadDetails, TimestampsToReturn.Both, false, Arrays.asList(histReadValueId)).get();
+		HistoryReadResponse hist = client.historyRead(historyReadDetails, TimestampsToReturn.Source, false, Arrays.asList(histReadValueId)).get();
 	
 		HistoryReadResult[] historyReadResults = hist.getResults();
         HistoryReadResult historyReadResult = historyReadResults[0];
         HistoryData historyData = historyReadResult.getHistoryData().decode();
         List<DataValue> dataValues = l(historyData.getDataValues());
         
-        dataValues.forEach(v -> System.out.println("value=" + v));
+
+//        System.out.println("First Element: " + dataValues.get(0).getValue().getValue() +" @ " + dataValues.get(0).getSourceTime().getJavaDate());
+//        System.out.println("Last Element: " + dataValues.get(dataValues.size()-1).getValue().getValue() +" @ " + dataValues.get(0).getSourceTime().getJavaDate());
+//        System.out.println(dataValues.size());
+        
+        List<Date> timeStamps= new ArrayList<>();
+        List<String> values = new ArrayList<>();	
+        
+        dataValues.forEach(value -> {
+        	
+        	timeStamps.add(value.getSourceTime().getJavaDate());
+        	values.add(value.getValue().getValue().toString());
+        });
+        
+        timeSeries= new TimeSeries(timeStamps, values);
         
         }
         catch (Exception e) {
         	System.out.println("ERROR: " +e.getMessage());
         }
-		return "s";
+		return timeSeries;
 	}
 
 }
