@@ -29,7 +29,7 @@ public class TestOPCReadConnection {
 			startTime = inFormat.parse(startTimeString);
 			System.out.println("Retrieve history from "+ startTime +" to " +stopTime);
 			
-			TimeSeries series=opcCon.readhistData(2, "MyLevel", startTime, stopTime);	
+			TimeSeries series=opcCon.readhistData(2, "MySwitch", startTime, stopTime);	
 			
 			if (series.size() > 0) {
 				System.out.println("First (1) entry: " + series.getValues().get(0) + " @ " + series.getTimeStamp(0));
