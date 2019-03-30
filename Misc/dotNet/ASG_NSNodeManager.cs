@@ -95,8 +95,28 @@ namespace ASG.ASG_NS
                 PackedBedRegeneratorModel myPackedBedRegeneratorModel = new PackedBedRegeneratorModel();
                 LinkModelToNode(ObjectIds.PackedBedRegenerator.ToNodeId(Server.NamespaceUris), myPackedBedRegeneratorModel, null, null, 500);
 
+                TemperatureSensorModel t1 = new TemperatureSensorModel();
+                LinkModelToNode(ObjectIds.PackedBedRegenerator_BulkContainer_T_L1.ToNodeId(Server.NamespaceUris), t1, null, null, 500);
+
+                TemperatureSensorModel t2 = new TemperatureSensorModel();
+                LinkModelToNode(ObjectIds.PackedBedRegenerator_BulkContainer_T_L2.ToNodeId(Server.NamespaceUris), t2, null, null, 500);
+
+                TemperatureSensorModel t3 = new TemperatureSensorModel();
+                LinkModelToNode(ObjectIds.PackedBedRegenerator_BulkContainer_T_L3.ToNodeId(Server.NamespaceUris), t3, null, null, 500);
+
+                TemperatureSensorModel t4 = new TemperatureSensorModel();
+                LinkModelToNode(ObjectIds.PackedBedRegenerator_BulkContainer_T_L4.ToNodeId(Server.NamespaceUris), t4, null, null, 500);
+                
                 // Set the values
                 myPackedBedRegeneratorModel.Heater.Setpoint = 77.0;
+                t1.CurrentTemperature.Value = 180;
+                t1.CurrentTemperature.EngineeringUnits = EngineeringUnits.Degree_Celsius;
+                t2.CurrentTemperature.Value = 190;
+                t2.CurrentTemperature.EngineeringUnits = EngineeringUnits.Degree_Celsius;
+                t3.CurrentTemperature.Value = 200;
+                t3.CurrentTemperature.EngineeringUnits = EngineeringUnits.Degree_Celsius;
+                t4.CurrentTemperature.Value = 210;
+                t4.CurrentTemperature.EngineeringUnits = EngineeringUnits.Degree_Celsius;
 
             }
             catch (Exception e)
