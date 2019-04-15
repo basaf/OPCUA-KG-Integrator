@@ -2,7 +2,10 @@ C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\ma
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\OPCUAConnector.java
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\GetCurrentValue.java
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\GetHistoricalValues.java
+C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\GetCurrentValueOWLFull.java
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\TimeSeries.java
+C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\TestOPCReadConnectionOWLFull.java
+C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\TestSPARQL2OPCValueAccessOWLFull.java
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\TestSPARQL2OPCValueAccess.java
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\TestOPCReadConnection.java
 C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\SPARQL ARQ Extension\src\main\java\virtualOPCEndpoint\Test_HistoricalValuesAccess.java

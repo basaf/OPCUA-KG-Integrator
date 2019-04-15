@@ -154,7 +154,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="497.13067"
+     inkscape:cx="386.77151"
      inkscape:cy="813.81275"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -165,9 +165,9 @@
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-global="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="657"
-     inkscape:window-x="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1">
     <inkscape:grid
@@ -189,7 +189,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -262,7 +262,7 @@
            height="52.527931"
            x="493.9646"
            y="163.88492" /></flowRegion><flowPara
-         id="flowPara34"></flowPara></flowRoot>    <rect
+         id="flowPara34" /></flowRoot>    <rect
        style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.2313412;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect36"
        width="39.768661"
@@ -309,7 +309,7 @@
            height="63.63961"
            x="151.52289"
            y="305.30627" /></flowRegion><flowPara
-         id="flowPara56"></flowPara></flowRoot>    <rect
+         id="flowPara56" /></flowRoot>    <rect
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.14174989;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect58"
        width="29.858253"
@@ -337,7 +337,7 @@
            height="35.355339"
            x="249.50768"
            y="43.676765" /></flowRegion><flowPara
-         id="flowPara70"></flowPara></flowRoot>    <rect
+         id="flowPara70" /></flowRoot>    <rect
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.25925756;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect72"
        width="34.778873"
@@ -450,9 +450,9 @@
          id="tspan3121"
          x="94.97583"
          y="95.975861"
-         style="stroke-width:0.26458332">Information Model Extraction</tspan></text>
+         style="stroke-width:0.26458332">OPC UA Ontology Extraction</tspan></text>
     <rect
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.22843581;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:0.16862746;fill-rule:evenodd;stroke:#000000;stroke-width:0.22843581;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect44-7"
        width="49.584629"
        height="9.7715654"

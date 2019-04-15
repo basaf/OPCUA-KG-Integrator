@@ -27,6 +27,7 @@
    # ja:loadClass "your.code.Class" ;  
 	ja:loadClass "virtualOPCEndpoint.GetCurrentValue";
 	ja:loadClass "virtualOPCEndpoint.GetHistoricalValues";
+	ja:loadClass "virtualOPCEndpoint.GetCurrentValueOWLFull";
 
    # End triples.
    .
