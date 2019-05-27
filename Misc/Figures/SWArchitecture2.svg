@@ -16,25 +16,39 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="SWArchitecture.svg"
+   sodipodi:docname="SWArchitecture2.svg"
    inkscape:export-filename="C:\Users\guser\Documents\VirtualOPCUA2SPQARLEndpoint\Misc\Figures\SWArchitecture.png"
    inkscape:export-xdpi="320.82596"
    inkscape:export-ydpi="320.82596">
   <defs
      id="defs2">
     <marker
-       inkscape:isstock="true"
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker2819"
        style="overflow:visible;"
-       id="marker3065"
+       inkscape:isstock="true">
+      <path
+         id="path2817"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2727"
        refX="0.0"
        refY="0.0"
        orient="auto"
-       inkscape:stockid="Arrow2Lend">
+       inkscape:stockid="Arrow2Lstart">
       <path
-         transform="scale(1.1) rotate(180) translate(1,0)"
+         transform="scale(1.1) translate(1,0)"
          d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
          style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         id="path3063" />
+         id="path2725" />
     </marker>
     <marker
        inkscape:isstock="true"
@@ -57,7 +71,8 @@
        refX="0.0"
        id="Arrow2Lstart"
        style="overflow:visible"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          id="path911"
          style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
@@ -114,7 +129,7 @@
        x2="85.526245"
        y2="29.730473"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-0.26726954,-0.66817382)" />
+       gradientTransform="translate(-0.26726954,1.4484929)" />
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
@@ -189,7 +204,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -212,7 +227,7 @@
        x="70.112473"
        y="32.112473" />
     <rect
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.25441864;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect14"
        width="29.745571"
        height="9.7455797"
@@ -251,7 +266,7 @@
          id="tspan24"
          x="-74.417526"
          y="73.714981"
-         style="stroke-width:0.26458332">Apache Jena</tspan></text>
+         style="stroke-width:0.26458332">(Apache Jena)</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot28"
@@ -263,7 +278,7 @@
            x="493.9646"
            y="163.88492" /></flowRegion><flowPara
          id="flowPara34" /></flowRoot>    <rect
-       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.2313412;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:#d2d2d2;fill-opacity:0.07843138;fill-rule:evenodd;stroke:#000000;stroke-width:0.2313412;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect36"
        width="39.768661"
        height="14.768661"
@@ -281,7 +296,7 @@
          style="stroke-width:0.26458332"
          id="tspan42">OPC UA Client </tspan></text>
     <rect
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.19242479;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.245;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect44"
        width="35.054451"
        height="9.8075762"
@@ -310,7 +325,7 @@
            x="151.52289"
            y="305.30627" /></flowRegion><flowPara
          id="flowPara56" /></flowRoot>    <rect
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.14174989;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.245;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect58"
        width="29.858253"
        height="9.9930954"
@@ -343,40 +358,40 @@
        width="34.778873"
        height="7.7612495"
        x="70.129631"
-       y="14.490892" />
+       y="16.607559" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient84);fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="72.964577"
-       y="19.173326"
+       y="21.289995"
        id="text76"><tspan
          sodipodi:role="line"
          id="tspan74"
          x="72.964577"
-         y="19.173326"
+         y="21.289995"
          style="fill:url(#linearGradient84);fill-opacity:1;stroke-width:0.26458332">Application / User</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.23789401;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       style="fill:none;stroke:#000000;stroke-width:0.24;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="m 87.612437,42.025673 0.0334,4.567731"
        id="path86"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.30989164;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-0)"
-       d="m 87.645835,22.220539 -0.03085,9.272188"
+       style="fill:none;stroke:#000000;stroke-width:0.24;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-0)"
+       d="m 87.646714,24.219413 -0.03174,7.312925"
        id="path86-2"
        inkscape:connector-curvature="0"
-       inkscape:transform-center-x="-0.12089153"
-       inkscape:transform-center-y="-5.1988236" />
+       inkscape:transform-center-x="-0.1243637"
+       inkscape:transform-center-y="-4.100284" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="89.936195"
-       y="26.656874"
+       x="90.738007"
+       y="30.131378"
        id="text1808"><tspan
          sodipodi:role="line"
          id="tspan1806"
-         x="89.936195"
-         y="26.656874"
+         x="90.738007"
+         y="30.131378"
          style="stroke-width:0.26458332">HTTP</tspan></text>
     <rect
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.16862745;fill-rule:evenodd;stroke:#000000;stroke-width:0.2413547;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -386,7 +401,7 @@
        x="125.22638"
        y="57.256901" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.30989164;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend-0-9)"
+       style="fill:none;stroke:#000000;stroke-width:0.24;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend-0-9)"
        d="m 141.82498,62.220537 -0.0308,9.272189"
        id="path86-2-7"
        inkscape:connector-curvature="0"
@@ -409,7 +424,7 @@
          style="stroke-width:0.26458332"
          id="tspan3506">Function</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2995)"
+       style="fill:none;stroke:#000000;stroke-width:0.24;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2995);stroke-miterlimit:4;stroke-dasharray:none"
        d="M 120,51.999999 H 105"
        id="path2985"
        inkscape:connector-curvature="0" />
@@ -435,28 +450,38 @@
          x="144.83679"
          y="67.887383"
          style="stroke-width:0.26458332">OPC UA</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.32316503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.96949504, 0.96949504;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker3065)"
-       d="m 139.9539,82.064169 c -24.94918,14.948839 -44.908532,0 -44.908532,0"
-       id="path3055"
-       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="94.97583"
-       y="95.975861"
+       style="font-style:normal;font-weight:normal;font-size:3.17499995px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="118.89325"
+       y="91.165009"
        id="text3123"><tspan
          sodipodi:role="line"
          id="tspan3121"
-         x="94.97583"
-         y="95.975861"
-         style="stroke-width:0.26458332">OPC UA Ontology Extraction</tspan></text>
+         x="119.45135"
+         y="91.165009"
+         style="text-align:center;text-anchor:middle;stroke-width:0.26458332">OPC UA Ontology </tspan><tspan
+         sodipodi:role="line"
+         x="118.89325"
+         y="95.133759"
+         style="text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan2203">Extraction</tspan></text>
     <rect
-       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:0.16862746;fill-rule:evenodd;stroke:#000000;stroke-width:0.22843581;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;vector-effect:none;fill:#d2d2d2;fill-opacity:0.07843138;fill-rule:evenodd;stroke:#000000;stroke-width:0.18313913;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect44-7"
-       width="49.584629"
-       height="9.7715654"
-       x="93.140366"
-       y="90.058456" />
+       width="31.722866"
+       height="9.8168631"
+       x="103.27396"
+       y="87.229477" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.24;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker2727);stroke-miterlimit:4;stroke-dasharray:0.72,0.72;stroke-dashoffset:0"
+       d="M 84.858073,82.115299 C 95.281585,92.271542 103.16604,92.137906 103.16604,92.137906"
+       id="path2795"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.24;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2819);stroke-miterlimit:4;stroke-dasharray:0.96,0.96;stroke-dashoffset:0"
+       d="M 152.87817,81.714397 C 142.58829,92.137906 134.97111,92.137906 134.97111,92.137906"
+       id="path2809"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
