@@ -45,7 +45,7 @@ public class Opcua2ModelTransformer {
 	int maxDepth = -1;
 	
 	// namespace Table of the OPC UA server
-	String[] namespaceArray = new String[0];
+	String[] namespaceArrayUaStyle = new String[0];
 	
 	// the resulting OntModel
 	Map<String, Model> models = null;
@@ -53,7 +53,8 @@ public class Opcua2ModelTransformer {
 	// Logging
 	Logger logger = null;
 	
-	private final String uaBaseNs = "http://opcfoundation.org/UA/";
+	private final String uaBaseNsUaStyle = "http://opcfoundation.org/UA/";
+	private final String uaBaseNsRdfStyle = uaBaseNsUaStyle + "#";
 
 	public Opcua2ModelTransformer() {
 		// the following map keeps the order of entries
@@ -85,14 +86,14 @@ public class Opcua2ModelTransformer {
 		client = HelperFunctions.connectToServer(endpointUrl);
 		
 		// get the namespace table from the server
-		namespaceArray = HelperFunctions.getNamespaceArray(client);
+		namespaceArrayUaStyle = HelperFunctions.getNamespaceArray(client);
 
 		// create a model for each namespace
-		for(String ns : namespaceArray) {
+		for(String ns : namespaceArrayUaStyle) {
 			Model model = ModelFactory.createDefaultModel();
 			// set the prefix for the uaBase namespace
-			model.setNsPrefix("uaBase", uaBaseNs + "#");
-			models.put(ns, model);
+			model.setNsPrefix("uaBase", uaBaseNsRdfStyle);
+			models.put(ns + "#", model); // ua namespaces do not contain the # in the end, it has to be added
 		}
 		
 		this.maxDepth = maxDepth;
@@ -160,12 +161,12 @@ public class Opcua2ModelTransformer {
 			Resource targetResource = transformNode(targetNode);
 			
 			// we want to keep the namespace with the lower index clean from other namespaces
-			String sourceNodeNs = namespaceArray[nodeId.getNamespaceIndex().intValue()];
-			String targetNodeNs = namespaceArray[targetNode.getNodeId().get().getNamespaceIndex().intValue()];
+			String sourceNodeNsUaStyle = namespaceArrayUaStyle[nodeId.getNamespaceIndex().intValue()];
+			String targetNodeNsUaStyle = namespaceArrayUaStyle[targetNode.getNodeId().get().getNamespaceIndex().intValue()];
 			String sourceResourceName = sourceResource.getURI().substring(sourceResource.getURI().indexOf('#')+1);
 			if(nodeId.getNamespaceIndex().intValue() < targetNode.getNodeId().get().getNamespaceIndex().intValue()) {
 				// add sourceResoure also to the other model
-				sourceResource = models.get(targetNodeNs).createResource(sourceNodeNs + "#" + sourceResourceName);
+				sourceResource = models.get(targetNodeNsUaStyle + "#").createResource(sourceNodeNsUaStyle + "#" + sourceResourceName);
 			}
 			sourceResource.addProperty(property, targetResource);			
 			// continue transformation process recursively
@@ -180,14 +181,14 @@ public class Opcua2ModelTransformer {
 
 		// get the corresponding model
 		int namespaceIndex = referenceNode.getNodeId().get().getNamespaceIndex().intValue();
-		String namespace = namespaceArray[namespaceIndex];
-		Model model = models.get(namespace);
+		String namespaceUaStyle = namespaceArrayUaStyle[namespaceIndex];
+		Model model = models.get(namespaceUaStyle + "#");
 		
 		// add the property
 		if(isForward)
-			property = model.createProperty(namespace + "#" + referenceNode.getBrowseName().get().getName());
+			property = model.createProperty(namespaceUaStyle + "#" + referenceNode.getBrowseName().get().getName());
 		else
-			property = model.createProperty(namespace + "#" + referenceNode.getInverseName().get().getText());
+			property = model.createProperty(namespaceUaStyle + "#" + referenceNode.getInverseName().get().getText());
 		
 		return property;
 	}
@@ -206,43 +207,43 @@ public class Opcua2ModelTransformer {
 		
 		// get the corresponding model
 		int namespaceIndex = node.getNodeId().get().getNamespaceIndex().intValue();
-		String namespace = namespaceArray[namespaceIndex];
-		Model model = models.get(namespace);
+		String namespaceUaStyle = namespaceArrayUaStyle[namespaceIndex];
+		Model model = models.get(namespaceUaStyle + "#");
 		String nameString = node.getNodeId().get().toString();
 		nameString = nameString.substring(nameString.indexOf('{') + 1, nameString.indexOf('}')).replace(" ",  "");
 		
 		// add the resource
 		if(node.getNodeClass().get().toString().endsWith("Type"))
-			resource = model.createResource(namespace + "#" + node.getBrowseName().get().getName());
+			resource = model.createResource(namespaceUaStyle + "#" + node.getBrowseName().get().getName());
 		else
-			resource = model.createResource(namespace + "#" + nameString);
+			resource = model.createResource(namespaceUaStyle + "#" + nameString);
 		
 		return resource;
 	}
 	
 	private void transformAttributes(UaNode node, Resource resource) throws Exception {
-		Model uaBaseModel = models.get(uaBaseNs);
+		Model uaBaseModel = models.get(uaBaseNsRdfStyle);
 		
 		// Add base node class attributes
 		resource.addLiteral(
-				uaBaseModel.createProperty(uaBaseNs +"#NodeId"), 
+				uaBaseModel.createProperty(uaBaseNsRdfStyle +"NodeId"), 
 				node.getNodeId().get().toString()
 				);
 		resource.addLiteral(
-				uaBaseModel.createProperty(uaBaseNs +"#NodeClass"), 
+				uaBaseModel.createProperty(uaBaseNsRdfStyle +"NodeClass"), 
 				node.getNodeClass().get().toString()
 				);
 		resource.addLiteral(
-				uaBaseModel.createProperty(uaBaseNs +"#BrowseName"), 
+				uaBaseModel.createProperty(uaBaseNsRdfStyle +"BrowseName"), 
 				node.getBrowseName().get().getName()
 				);
 		resource.addLiteral(
-				uaBaseModel.createProperty(uaBaseNs +"#DisplayName"), 
+				uaBaseModel.createProperty(uaBaseNsRdfStyle +"DisplayName"), 
 				node.getDisplayName().get().getText()
 				);
 		try {
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#Description"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"Description"), 
 					node.getDescription().get().getText()
 					);		}
 		catch (Exception e) {
@@ -250,7 +251,7 @@ public class Opcua2ModelTransformer {
 		}
 		try {
 		resource.addLiteral(
-				uaBaseModel.createProperty(uaBaseNs +"#WriteMask"), 
+				uaBaseModel.createProperty(uaBaseNsRdfStyle +"WriteMask"), 
 				node.getWriteMask().get().toString()
 				);		}
 		catch (Exception e) {
@@ -259,7 +260,7 @@ public class Opcua2ModelTransformer {
 
 		try {
 		resource.addLiteral(
-				uaBaseModel.createProperty(uaBaseNs +"#UserWriteMask"), 
+				uaBaseModel.createProperty(uaBaseNsRdfStyle +"UserWriteMask"), 
 				node.getUserWriteMask().get().toString()
 				);		}
 		catch (Exception e) {
@@ -270,44 +271,44 @@ public class Opcua2ModelTransformer {
 		switch(node.getNodeClass().get()) {
 		case DataType: 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#IsAbstract"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"IsAbstract"), 
 					((UaDataTypeNode) node).getIsAbstract().get()
 					);
 			break;
 		case Method: 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#Executable"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"Executable"), 
 					((UaMethodNode) node).getExecutable().get()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#UserExecutable"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"UserExecutable"), 
 					((UaMethodNode) node).getUserExecutable().get()
 					);
 			break;
 		case Object:
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#EventNotifier"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"EventNotifier"), 
 					((UaObjectNode) node).getEventNotifier().get().byteValue()
 					);
 			break;
 		case ObjectType: 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#IsAbstract"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"IsAbstract"), 
 					((UaObjectTypeNode) node).getIsAbstract().get()
 					);
 			break;
 		case ReferenceType: 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#IsAbstract"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"IsAbstract"), 
 					((UaReferenceTypeNode) node).getIsAbstract().get()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#Symmetric"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"Symmetric"), 
 					((UaReferenceTypeNode) node).getSymmetric().get()
 					);
 			try {
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#InverseName"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"InverseName"), 
 					((UaReferenceTypeNode) node).getInverseName().get().getText()
 					);			}
 			catch (Exception e) {
@@ -317,20 +318,20 @@ public class Opcua2ModelTransformer {
 			break;
 		case Variable: 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#Value"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"Value"), 
 					client.readValue(0, null, node.getNodeId().get()).get().toString()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#DataType"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"DataType"), 
 					((UaVariableNode) node).getDataType().get().toString()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#ValueRank"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"ValueRank"), 
 					((UaVariableNode) node).getValueRank().get()
 					);
 			try {
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#ArrayDimensions"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"ArrayDimensions"), 
 					((UaVariableNode) node).getArrayDimensions().get().toString()
 					);
 			}
@@ -338,16 +339,16 @@ public class Opcua2ModelTransformer {
 				// ignore if reading an optional argument fails
 			}
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#AccessLevel"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"AccessLevel"), 
 					((UaVariableNode) node).getAccessLevel().get().byteValue()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#UserAccessLevel"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"UserAccessLevel"), 
 					((UaVariableNode) node).getUserAccessLevel().get().byteValue()
 					);
 			try {
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#MinimumSamplingInterval"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"MinimumSamplingInterval"), 
 					((UaVariableNode) node).getMinimumSamplingInterval().get()
 					);			}
 			catch (Exception e) {
@@ -355,14 +356,14 @@ public class Opcua2ModelTransformer {
 			}
 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#Historizing"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"Historizing"), 
 					((UaVariableNode) node).getHistorizing().get()
 					);
 			break;
 		case VariableType: 
 			try {
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#Value"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"Value"), 
 					client.readValue(0, null, node.getNodeId().get()).get().toString()
 					);			
 			}
@@ -371,16 +372,16 @@ public class Opcua2ModelTransformer {
 			}
 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#DataType"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"DataType"), 
 					((UaVariableTypeNode) node).getDataType().get().toString()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#ValueRank"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"ValueRank"), 
 					((UaVariableTypeNode) node).getValueRank().get()
 					);
 			try {
 				resource.addLiteral(
-						uaBaseModel.createProperty(uaBaseNs +"#ArrayDimensions"), 
+						uaBaseModel.createProperty(uaBaseNsRdfStyle +"ArrayDimensions"), 
 						((UaVariableTypeNode) node).getArrayDimensions().get().toString()
 						);
 			}
@@ -388,17 +389,17 @@ public class Opcua2ModelTransformer {
 				// ignore if reading an optional argument fails
 			}
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#IsAbstract"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"IsAbstract"), 
 					((UaVariableTypeNode) node).getIsAbstract().get()
 					);
 			break;
 		case View: 
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#ContainsNoLoops"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"ContainsNoLoops"), 
 					((UaViewNode) node).getContainsNoLoops().get()
 					);
 			resource.addLiteral(
-					uaBaseModel.createProperty(uaBaseNs +"#EventNotifier"), 
+					uaBaseModel.createProperty(uaBaseNsRdfStyle +"EventNotifier"), 
 					((UaViewNode) node).getEventNotifier().get().byteValue()
 					);
 			break;

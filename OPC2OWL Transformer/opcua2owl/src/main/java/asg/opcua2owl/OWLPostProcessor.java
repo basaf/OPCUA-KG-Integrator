@@ -25,38 +25,38 @@ import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 
 public class OWLPostProcessor implements PostProcessor {
-	private final String uaBaseNs = "http://opcfoundation.org/UA/";
+	private final String uaBaseNsRdfStyle = "http://opcfoundation.org/UA/#";
 	
 	@Override
-	public OntModel process(Map<String, Model> models, String namespace, boolean imports, Logger logger) {
+	public OntModel process(Map<String, Model> models, String namespaceRdfStyle, boolean imports, Logger logger) {
 		Hashtable<String, OntModel> ontModels = new Hashtable<String, OntModel>();
-		for(String ns : models.keySet()) {
+		for(String nsRdfStyle : models.keySet()) {
 			OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
-			ontModel.add(models.get(ns));
+			ontModel.add(models.get(nsRdfStyle));
 			
 			// add the <ontology rdf:about = " ... ">
-			Ontology baseOnt = ontModel.createOntology(ns);
+			Ontology baseOnt = ontModel.createOntology(nsRdfStyle);
 			
 			// Import all other namespaces
 			if(imports)
-				for(String importNs : models.keySet()) {
-					if(ns.equals(importNs))
+				for(String nsRdfStyleToBeImported : models.keySet()) {
+					if(nsRdfStyle.equals(nsRdfStyleToBeImported))
 						continue;
-					Resource ontToBeImported = ontModel.createResource(importNs);
+					Resource ontToBeImported = ontModel.createResource(nsRdfStyleToBeImported);
 					baseOnt.addImport(ontToBeImported);
 				}
 			
 			// set namespace prefixes
-			ontModel.setNsPrefix("uaBase", "http://opcfoundation.org/UA/" + "#");
-			ontModels.put(ns, ontModel);
+			ontModel.setNsPrefix("uaBase", uaBaseNsRdfStyle);
+			ontModels.put(nsRdfStyle, ontModel);
 		}
 		
 		// create a new model from the old one
-		OntModel ontModel = ontModels.get(namespace);
-		OntModel uaBaseOntModel = ontModels.get(uaBaseNs);
+		OntModel ontModel = ontModels.get(namespaceRdfStyle);
+		OntModel uaBaseOntModel = ontModels.get(uaBaseNsRdfStyle);
 		
 		// create a label for all resources from their uaBase:DisplayName
-		Property displayNameProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#DisplayName");
+		Property displayNameProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "DisplayName");
 		for(ResIterator resources = ontModel.listResourcesWithProperty(displayNameProperty); resources.hasNext();) {
 			Resource resource = resources.next();
 			Literal displayNameLiteral = resource.getProperty(displayNameProperty).getObject().asLiteral();
@@ -64,7 +64,7 @@ public class OWLPostProcessor implements PostProcessor {
 		}
 
 		// every resource with uaBase:nodeClass == *Type, except for ReferenceType is a class
-		Property nodeClassProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#NodeClass");
+		Property nodeClassProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "NodeClass");
 		for(ResIterator resources = ontModel.listResourcesWithProperty(nodeClassProperty); resources.hasNext();) {
 			Resource resource = resources.next();
 			Literal nodeClassLiteral = resource.getProperty(nodeClassProperty).getObject().asLiteral();
@@ -73,7 +73,7 @@ public class OWLPostProcessor implements PostProcessor {
 		}
 
 		// every resource with uaBase:HasTypeDefinition is an individual
-		Property hasTypeDefinitionProperty = uaBaseOntModel.createObjectProperty(uaBaseNs + "#HasTypeDefinition");
+		Property hasTypeDefinitionProperty = uaBaseOntModel.createObjectProperty(uaBaseNsRdfStyle + "HasTypeDefinition");
 		for(ResIterator resources = ontModel.listResourcesWithProperty(hasTypeDefinitionProperty); resources.hasNext();) {
 			Resource subject = resources.next();
 			Resource object = subject.getProperty(hasTypeDefinitionProperty).getObject().asResource();
@@ -81,45 +81,46 @@ public class OWLPostProcessor implements PostProcessor {
 		}
 		
 		// every resource with uaBase:hasSubtype is the superclass of another class
-		Property hasSubtypeProperty = uaBaseOntModel.createObjectProperty(uaBaseNs + "#HasSubtype");
+		Property hasSubtypeProperty = uaBaseOntModel.createObjectProperty(uaBaseNsRdfStyle + "HasSubtype");
 		for(String ns : ontModels.keySet()) {
 			OntModel currentModel = ontModels.get(ns);
 			for(ResIterator subjectResources = currentModel.listResourcesWithProperty(hasSubtypeProperty); subjectResources.hasNext();) {
 				Resource subjectResource = subjectResources.next();
 				for(StmtIterator stmt = subjectResource.listProperties(hasSubtypeProperty); stmt.hasNext();) {
 					Resource objectResource = stmt.next().getObject().asResource();
-					if(objectResource.getNameSpace().equals(namespace)) {
+					if(objectResource.getNameSpace().equals(namespaceRdfStyle)) {
 						OntClass objectClass = ontModel.createClass(objectResource.getURI());
 						objectClass.addSuperClass(subjectResource);
+						System.out.println(objectClass.toString() + "is subclass of " + subjectResource.toString());
 					}
 				}
 			}
 		}
 		
 		// create annotation properties, e.g. uaBase:Value for all OPC UA attributes
-		if(namespace.equals(uaBaseNs)) {
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#AccessLevel");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#ArrayDimensions");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#BrowseName");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#ContainsNoLoops");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#DataType");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#Description");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#DisplayName");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#Executable");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#EventNotifier");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#Historizing");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#InverseName");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#IsAbstract");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#MinimumSamplingInterval");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#NodeClass");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#NodeId");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#Symmetric");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#UserAccessLevel");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#UserExecutable");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#UserWriteMask");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#Value");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#ValueRank");
-			uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#WriteMask");
+		if(namespaceRdfStyle.equals(uaBaseNsRdfStyle)) {
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "AccessLevel");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "ArrayDimensions");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "BrowseName");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "ContainsNoLoops");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "DataType");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "Description");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "DisplayName");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "Executable");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "EventNotifier");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "Historizing");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "InverseName");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "IsAbstract");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "MinimumSamplingInterval");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "NodeClass");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "NodeId");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "Symmetric");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "UserAccessLevel");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "UserExecutable");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "UserWriteMask");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "Value");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "ValueRank");
+			uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "WriteMask");
 		}
 		
 		// every resource with uaBase:nodeClass == ReferenceType is an object property
@@ -134,9 +135,8 @@ public class OWLPostProcessor implements PostProcessor {
 		// create object properties, e.g. uaBase:HasComponent for all non-annotation properties and add some characteristics, e.g. symmetric. etc.
 		List<OntProperty> ontProperties = ontModel.listAllOntProperties().toList();
 		for(OntProperty ontProperty : ontProperties) {
-			String ontPropertyNs = ontProperty.getNameSpace();
-			ontPropertyNs = ontPropertyNs.substring(0, ontPropertyNs.indexOf('#'));
-			OntModel ontPropertyModel = ontModels.get(ontPropertyNs);
+			String ontPropertyNsRdfStyle = ontProperty.getNameSpace();
+			OntModel ontPropertyModel = ontModels.get(ontPropertyNsRdfStyle);
 			
 			if(ontProperty.isAnnotationProperty())
 				continue;
@@ -144,7 +144,7 @@ public class OWLPostProcessor implements PostProcessor {
 			ObjectProperty ontObjProperty = ontModel.createObjectProperty(ontProperty.getURI());
 			
 			// declare the property symmetric if the corresponding OPC UA reference is symmetric
-			AnnotationProperty symmetricProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#Symmetric");
+			AnnotationProperty symmetricProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "Symmetric");
 			if(ontObjProperty.getProperty(symmetricProperty) != null) {
 				Literal symmetricLiteral = ontObjProperty.getProperty(symmetricProperty).getObject().asLiteral();
 				if(symmetricLiteral.getBoolean())
@@ -152,11 +152,11 @@ public class OWLPostProcessor implements PostProcessor {
 			}
 			
 			// create an inverse property if the OPC UA reference has an inverse name
-			AnnotationProperty inverseNameProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNs + "#InverseName");
+			AnnotationProperty inverseNameProperty = uaBaseOntModel.createAnnotationProperty(uaBaseNsRdfStyle + "InverseName");
 			if(ontObjProperty.getProperty(inverseNameProperty) != null) {				
 				Literal inverseNameLiteral = ontObjProperty.getProperty(inverseNameProperty).getObject().asLiteral();
 				if(inverseNameLiteral.getString() != null) {
-					ObjectProperty inverseProperty = ontPropertyModel.createObjectProperty(ontPropertyNs + "#" + inverseNameLiteral.getString());
+					ObjectProperty inverseProperty = ontPropertyModel.createObjectProperty(ontPropertyNsRdfStyle + inverseNameLiteral.getString());
 					inverseProperty.addInverseOf(ontProperty);
 				}
 			}

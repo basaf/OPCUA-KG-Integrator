@@ -19,8 +19,9 @@ public class App
 {
 	// OPC UA server endpoint url
 	private static final String ENDPOINT_URL = "opc.tcp://localhost:48030";
-	private static final int MAX_DEPTH = 30;
-	private static final String uaBaseNs = "http://opcfoundation.org/UA/";
+	private static final int MAX_DEPTH = 40;
+	private static final String uaBaseNsUaStyle = "http://opcfoundation.org/UA/";
+	private static final String uaBaseNsRdfStyle = "http://opcfoundation.org/UA/#";
 	private static final String outputDir = "C:\\Users\\user1\\Desktop\\VirtualEndpointsProofOfConcept\\Git\\VirtualOPCUA2SPQARL\\Ontologies\\";
 	
 
@@ -32,7 +33,7 @@ public class App
         System.out.println( "Opcua2Owl" );
 
     	Vector<NodeId> rootNodeIds = new Vector<NodeId>();
-    	rootNodeIds.add(new NodeId(0, 84));
+    	rootNodeIds.add(new NodeId(0, 58));
         
         System.out.print("Transforming OPC UA address space ...");
         Opcua2ModelTransformer opcua2ModelTransformer = new Opcua2ModelTransformer(ENDPOINT_URL, logger);
@@ -40,31 +41,33 @@ public class App
         System.out.println();
         
         int i = 0;
-        // publish models
+        
         /*
+        // publish models as plain rdf
         for(String ns : models.keySet()) {
-        	System.out.println("Publishing ns" + i + " ...");
+        	System.out.println("Publishing ns" + i + " " + ns + " ...");
     		HelperFunctions.publishModelAsRdfXml(outputDir + "ns" + i + ".rdf", models.get(ns), logger);
         	i++;
         }
         */
-       
+
         // postProcess and publish models
         Map<String, String> nsSubstitutionTable = Collections.synchronizedMap(new LinkedHashMap<String, String>());
-        nsSubstitutionTable.put(uaBaseNs, "http://auto.tuwien.ac.at/opcua");
-        nsSubstitutionTable.put("http://auto.tuwien.ac.at/PackedBedRegenerator/", "http://auto.tuwien.ac.at/packed-bed-regenerator");
-        nsSubstitutionTable.put("urn:packed-bed-regenerator-opcua-server:ASG:ASG_NS", "http://auto.tuwien.ac.at/packed-bed-regenerator-session-information");
+        nsSubstitutionTable.put(uaBaseNsRdfStyle, "http://auto.tuwien.ac.at/~ontologies/opcua.owl#");
+        nsSubstitutionTable.put("http://auto.tuwien.ac.at/PackedBedRegenerator/#", "http://auto.tuwien.ac.at/~ontologies/packed-bed-regenerator.owl#");
+        nsSubstitutionTable.put("urn:pauker-nb:ASG:ASG_NS#", "http://auto.tuwien.ac.at/~ontologies/session.owl#");
         PostProcessor postProcessor = new OWLPostProcessor();
         i = 0;
-        for(String ns : models.keySet()) {
-            System.out.println("Post processing ns" + i + " ...");
-        	OntModel ontModel = postProcessor.process(models, ns, false, logger);
+        for(String nsRdfStyle : models.keySet()) {
+            System.out.println("Post processing ns" + i + " " + nsRdfStyle + " ...");
+        	OntModel ontModel = postProcessor.process(models, nsRdfStyle, false, logger);
         	ontModel = postProcessor.substitudeNamespaces(ontModel, nsSubstitutionTable);
-        	String substitutedNs = nsSubstitutionTable.get(ns);
-        	String filename = substitutedNs.substring(substitutedNs.lastIndexOf('/') + 1);
-        	System.out.println("Publishing ns " + filename + ".owl" + " ...");
-    		HelperFunctions.publishModelAsRdfXml(outputDir + filename + ".owl", ontModel, logger);
+        	String substitutedNs = nsSubstitutionTable.get(nsRdfStyle);
+        	String filename = substitutedNs.substring(substitutedNs.lastIndexOf('/') + 1).replace("#", "");
+        	System.out.println("Publishing ns " + filename + " ...");
+    		HelperFunctions.publishModelAsRdfXml(outputDir + filename, ontModel, logger);
         	i++;
         }
+
     }
 }
