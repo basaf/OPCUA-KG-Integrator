@@ -59,13 +59,23 @@ public class OPCUAConnector implements ExtConnector{
 	}
 	
 	public String readValue(Integer NamespaceIndex,String NodeIDString) {
-		String value_s=null;
 		
+		NodeId nodeId = new NodeId(NamespaceIndex, NodeIDString);	
+		return getValue(nodeId);
+				
+	}
+	
+	public String readValue(Integer NamespaceIndex,Integer NodeIDString) {
+		
+		NodeId nodeId = new NodeId(NamespaceIndex, NodeIDString);	
+		return getValue(nodeId);		
+	}
+	
+	private String getValue(NodeId nodeId) {
+		String value_s=null;
 		try {
 			OpcUaClient client=connectToEndpoint();
 		
-			//defining node id
-			NodeId nodeId = new NodeId(NamespaceIndex, NodeIDString);
 			//read data with client
 			DataValue value =
 					  client.readValue(0, TimestampsToReturn.Both, nodeId)
@@ -73,15 +83,13 @@ public class OPCUAConnector implements ExtConnector{
 			//convert value to String
 			value_s=value.getValue().getValue().toString();		
 			
+			client.disconnect();
 		}catch(Exception e) {
 			System.out.println("ERROR: " +e.getMessage());
 		}
-		finally {
-			
-		}
-			return value_s;
+
 		
-		
+		return value_s;
 	}
 
 	public TimeSeries readhistData(Integer NamespaceIndex,String NodeIDString, Date startTime, Date stopTime) {
@@ -131,6 +139,7 @@ public class OPCUAConnector implements ExtConnector{
         });
         
         timeSeries= new TimeSeries(timeStamps, values);
+        client.disconnect();
         
         }
         catch (Exception e) {
