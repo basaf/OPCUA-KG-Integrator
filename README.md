@@ -1,4 +1,4 @@
-# VirtualOPCUA2SPQARL (working project title)
+# OPC UA Knowledge Graph Integrator
 
 **Caution: This is just a proof of concept implementation**
 
