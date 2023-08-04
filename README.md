@@ -2,7 +2,8 @@
 
 **Caution: This is just a proof of concept implementation**
 
-More Information about the integration procedure can be found in the article [_"Ontology-Based OPC UA Data Access via Custom Property Functions"_](https://ieeexplore.ieee.org/document/8869436)
+More Information about the integration procedure can be found in the article:    
+[_G. Steindl, T. Frühwirth and W. Kastner, "Ontology-Based OPC UA Data Access via Custom Property Functions," 2019 24th IEEE International Conference on Emerging Technologies and Factory Automation (ETFA), Zaragoza, Spain, 2019, pp. 95-101, doi: 10.1109/ETFA.2019.8869436._](https://ieeexplore.ieee.org/document/8869436)
 
 There are basically two steps:  
 1) to read the OPC UA information model from a server and transform it into OWL
