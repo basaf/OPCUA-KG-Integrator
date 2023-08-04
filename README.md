@@ -24,8 +24,9 @@ The approach can be extended by transforming parts of the OPC OWL ontology into 
 
 
 ## Contact
-Gernot Steindl  
+Gernot Steindl 
+gernot.steindl@tuwien.ac.at
 Institute of Computer Engineering  
 Research Unit Automation Systems  
-TU Wien  
-gernot.steindl@tuwien.ac.at
+TU Vienna 
+
